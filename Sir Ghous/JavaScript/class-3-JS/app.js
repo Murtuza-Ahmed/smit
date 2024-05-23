@@ -65,3 +65,18 @@ var x = 5;
 var y = 3;
 var z = x ** y;
 console.log(z);
+
+// Array.prototype.last = function (number) {
+//     if (number === false) {
+//         console.log("It's Not a Number")
+//     } else if (number === true) {
+//         console.log("It's Number")
+//     } else {
+//         console.log(NaN)
+//     }
+// }
+
+// const funcNum = last(5);
+// // const funcStr = last("Sheroz");
+// console.log(funcNum());
+// // console.log(funcStr());
