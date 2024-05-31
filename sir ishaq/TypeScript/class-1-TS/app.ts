@@ -93,3 +93,40 @@ console.log(customer)
 
 
 
+// [TUPLE] ARRAY TYPESCRIPT
+
+const statuses: [number, string, boolean] = [404, "not found", false];   // FIXED LENGTH
+
+type role = [number, string, boolean];
+const roles: role = [0, "admin", true];    //FIXED LENGTH
+
+
+let data: string | number | boolean;
+data = "Ahemd";
+data = 27;
+data = true
+
+
+// Template Literal Types
+// literal Type ham khud batate hn hame konsi string chaye
+function myFunc(num1: number, num2: number, count: "add" | "sub") {
+    count === "add" ? num1 + num2 : "NaN";
+    count === "sub" ? num1 - num2 : "Nan";
+}
+
+console.log("ADDITION", myFunc(5, 10, "add"));
+console.log("SUBTRACT", myFunc(5, 20, "sub"));
+// console.log("DIVIDED", myFunc(2, 4, "divi"));
+
+
+// FUNCTION
+
+let myFuncAdd: (a: number, b: number) => number;
+
+function multipule(num1: number, num2: number): number {
+    return num1 * num2
+}
+
+myFuncAdd = multipule;
+let result = myFuncAdd(5, 20);
+console.log("RESULT", result);
