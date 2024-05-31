@@ -74,3 +74,22 @@ let freindDetail: FreindDetail = {
     email: "umerabbas@gmail.com",
     hobbies: ["larkiBazi", "AuntiLover"]
 }
+
+type customerDetail = { // CUSTOME TYPE
+    name: string;
+    age: number;
+    hobbies: string[];
+    email: string;
+}
+
+let customer: customerDetail[] = []
+customer.push({
+    name: "sheroz",
+    age: 27,
+    email: "umerabbas@gmail.com",
+    hobbies: ["larkiBazi", "AuntiLover"]
+})
+console.log(customer)
+
+
+
