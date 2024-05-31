@@ -50,9 +50,27 @@ const personObj: {
     name: string;
     age: number;
     hobbies: string[];
-    email?: string;
+    email?: string;  //  BAD PARACTICE
 } = {
     name: "sheroz",
     age: 25,
-    hobbies: ["football", "basketball"]
+    hobbies: ["football", "basketball"],
+    // email: "" BEST PARACTICE
+}
+personObj.email = "murtuza.programmer@gmail.com";
+
+// CUSTOME TYPE
+
+type FreindDetail = { // CUSTOME TYPE
+    name: string;
+    age: number;
+    hobbies: string[];
+    email: string;
+}
+
+let freindDetail: FreindDetail = {
+    name: "umer",
+    age: 24,
+    email: "umerabbas@gmail.com",
+    hobbies: ["larkiBazi", "AuntiLover"]
 }
