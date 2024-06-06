@@ -154,3 +154,70 @@ volunteerMe.willVolunteerIn = ["apple"]
 console.log(volunteerMe.getSkills());
 console.log(volunteerMe.willVolunteerIn);   //  GETTER KA FYDA YE HOTA HE CALL KARNE KI ZORORAT NAHI HOTI LAGTA METHOD KI TARAH HE PAR BEHAVE PROPERTY KI TARAH KARE GA
 // (END)
+
+
+
+// STATIC METHOD  START  (Static Method ka Fayda ye he WhitOut (OBJECT) banaye Access kae sakte hn)
+
+class StudentMath {
+    name: string;
+    rollNo: number;
+    private skills: string[] = [];  //  Keep skills private to prevent direct modification, use getters and setters to access them.
+    constructor(n: string, r: number) { // Long constructor form
+        this.name = n;
+        this.rollNo = r;
+    };
+    // constructor(public name: string, public rollNo: number) { } // Shorthand constructor form
+
+    addSkill(skill: string) {
+        this.skills.push(skill);
+    };
+    getSkills() {   // Use this method to get the private skills array
+        return this.skills;
+    };
+};
+
+class volunteerStudentMath extends StudentMath {    //  Extends child class VolunteerStudentMe from parent class StudentSit 
+
+    private canVolunteerInMath: string[] = [];  // Keep canVolunteerInMe private to prevent direct modification, use getter to access it
+
+    static id: string = "abc-123";  //  STATIC METHOD
+
+    constructor(name: string, rollNo: number) {
+        super(name, rollNo); //  Pass data to the parent class constructor using super
+    }
+    addVolunterSkills(skills: string) {
+        this.canVolunteerInMath.push(skills);
+    }
+
+    get willVolunteerIn() { //   Getter method to access canVolunteerInMe
+        return this.canVolunteerInMath;
+    }
+
+    set willVolunteerIn(skills: string[]) { //  SETTER METHOD TO ACCESS canVolunteerInMe
+
+        for (const skill of skills) {   //  CONDITION LAGA KE ARRAY SKILLS CHECK KAR RAHE HN AGARA SKILLS EMPTY HO TO RETURN KARDE 
+            if (!skill) {
+                return
+            }
+        }
+
+        this.canVolunteerInMath = skills;     //  APNE MARZI SE SET KARA SAKTE HN
+    }
+};
+
+// Create an instance of StudentSit
+const studentMath = new StudentMath("Sheroz", 27);
+studentMe.addSkill("javascript");
+// studentMath.id   //  STATIC PROPERTYES YA STATIC METHOD JO HOTE HN WO HAMARE BANAYE HUWE OBJECTME NAHI MILENGE (JIS CLASS ME STATIC HE US CLASS KO ACCESS KARNA PARE GA)
+console.log(studentMe);
+
+// Create an instance of VolunteerStudentMe
+const volunteerMath = new volunteerStudentMath("Raza", 20);
+volunteerMe.addSkill("html");
+volunteerMe.addSkill("teaching");
+volunteerMe.willVolunteerIn = ["apple"];
+console.log(volunteerStudentMath.id);
+console.log(volunteerMe.getSkills());
+console.log(volunteerMe.willVolunteerIn);   //  GETTER KA FYDA YE HOTA HE CALL KARNE KI ZORORAT NAHI HOTI LAGTA METHOD KI TARAH HE PAR BEHAVE PROPERTY KI TARAH KARE GA
+// (END)

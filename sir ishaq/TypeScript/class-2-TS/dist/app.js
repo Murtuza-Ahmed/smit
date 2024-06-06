@@ -134,4 +134,59 @@ volunteerMe.willVolunteerIn = ["apple"];
 console.log(volunteerMe.getSkills());
 console.log(volunteerMe.willVolunteerIn); //  GETTER KA FYDA YE HOTA HE CALL KARNE KI ZORORAT NAHI HOTI LAGTA METHOD KI TARAH HE PAR BEHAVE PROPERTY KI TARAH KARE GA
 // (END)
+// STATIC METHOD  START  (Static Method ka Fayda ye he WhitOut (OBJECT) banaye Access kae sakte hn)
+class StudentMath {
+    constructor(n, r) {
+        this.skills = []; //  Keep skills private to prevent direct modification, use getters and setters to access them.
+        this.name = n;
+        this.rollNo = r;
+    }
+    ;
+    // constructor(public name: string, public rollNo: number) { } // Shorthand constructor form
+    addSkill(skill) {
+        this.skills.push(skill);
+    }
+    ;
+    getSkills() {
+        return this.skills;
+    }
+    ;
+}
+;
+class volunteerStudentMath extends StudentMath {
+    constructor(name, rollNo) {
+        super(name, rollNo); //  Pass data to the parent class constructor using super
+        this.canVolunteerInMath = []; // Keep canVolunteerInMe private to prevent direct modification, use getter to access it
+    }
+    addVolunterSkills(skills) {
+        this.canVolunteerInMath.push(skills);
+    }
+    get willVolunteerIn() {
+        return this.canVolunteerInMath;
+    }
+    set willVolunteerIn(skills) {
+        for (const skill of skills) { //  CONDITION LAGA KE ARRAY SKILLS CHECK KAR RAHE HN AGARA SKILLS EMPTY HO TO RETURN KARDE 
+            if (!skill) {
+                return;
+            }
+        }
+        this.canVolunteerInMath = skills; //  APNE MARZI SE SET KARA SAKTE HN
+    }
+}
+volunteerStudentMath.id = "abc-123"; //  STATIC METHOD
+;
+// Create an instance of StudentSit
+const studentMath = new StudentMath("Sheroz", 27);
+studentMe.addSkill("javascript");
+// studentMath.id   //  STATIC PROPERTYES YA STATIC METHOD JO HOTE HN WO HAMARE BANAYE HUWE OBJECTME NAHI MILENGE (JIS CLASS ME STATIC HE US CLASS KO ACCESS KARNA PARE GA)
+console.log(studentMe);
+// Create an instance of VolunteerStudentMe
+const volunteerMath = new volunteerStudentMath("Raza", 20);
+volunteerMe.addSkill("html");
+volunteerMe.addSkill("teaching");
+volunteerMe.willVolunteerIn = ["apple"];
+console.log(volunteerStudentMath.id);
+console.log(volunteerMe.getSkills());
+console.log(volunteerMe.willVolunteerIn); //  GETTER KA FYDA YE HOTA HE CALL KARNE KI ZORORAT NAHI HOTI LAGTA METHOD KI TARAH HE PAR BEHAVE PROPERTY KI TARAH KARE GA
+// (END)
 //# sourceMappingURL=app.js.map
