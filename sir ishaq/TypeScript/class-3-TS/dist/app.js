@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * interface me (=) ka sing nai hota he
  * (TYPE) or (INTERFACE) dono ek hi he ek chota sa farq he
@@ -27,5 +25,13 @@ class Human {
 }
 /**
  * END
- */ 
+ */
+// ADVANCED TYPES
+// type Combindes = string | number
+let abc;
+abc = 26;
+abc = "sheroz";
+console.log(abc);
+console.log("ahmed");
+// export {};
 //# sourceMappingURL=app.js.map

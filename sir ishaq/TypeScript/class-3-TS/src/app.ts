@@ -1,4 +1,4 @@
-import { Person } from "./types";
+import { Person, Combined } from "./types";
 
 /**
  * interface me (=) ka sing nai hota he 
@@ -31,3 +31,15 @@ class Human implements Person {
 /**
  * END
  */
+
+
+// ADVANCED TYPES
+
+// type Combindes = string | number
+
+let abc: Combined;
+abc = 26;
+abc = "sheroz";
+console.log(abc)
+
+console.log("ahmed")
