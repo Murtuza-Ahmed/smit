@@ -189,4 +189,56 @@ console.log(volunteerStudentMath.id);
 console.log(volunteerMe.getSkills());
 console.log(volunteerMe.willVolunteerIn); //  GETTER KA FYDA YE HOTA HE CALL KARNE KI ZORORAT NAHI HOTI LAGTA METHOD KI TARAH HE PAR BEHAVE PROPERTY KI TARAH KARE GA
 // (END)
+/**
+ * Abstract Classes esi Classes Hoti Hn Jinki Method ki koi Defination Nai hoti
+ * koi bhi is class ko extands karta he usko ye wala (METHOD) define karna pare ga
+ * Ek rule define karte hn agar apko ye kam karna he to apko is rule se chalna pare ga
+ * method ko Abstract karne ke bad pori class ko abstract karna pare ga
+ */
+// ABSTRACT AND SINGLETONS
+class StudentAbstract {
+    constructor(n, r) {
+        this.skills = []; //  Keep skills private to prevent direct modification, use getters and setters to access them.
+        this.name = n;
+        this.rollNo = r;
+    }
+    ;
+    getSkills() {
+        return this.skills;
+    }
+    ;
+}
+;
+class volunteerStudentAbstract extends StudentAbstract {
+    constructor(name, rollNo) {
+        super(name, rollNo); //  Pass data to the parent class constructor using super
+        this.canVolunteerInMath = []; // Keep canVolunteerInMe private to prevent direct modification, use getter to access it
+    }
+    addSkill(skill) { } //  rule define method abstract
+    addVolunterSkills(skills) {
+        this.canVolunteerInMath.push(skills);
+    }
+    get willVolunteerIn() {
+        return this.canVolunteerInMath;
+    }
+    set willVolunteerIn(skills) {
+        for (const skill of skills) { //  CONDITION LAGA KE ARRAY SKILLS CHECK KAR RAHE HN AGARA SKILLS EMPTY HO TO RETURN KARDE 
+            if (!skill) {
+                return;
+            }
+        }
+        this.canVolunteerInMath = skills; //  APNE MARZI SE SET KARA SAKTE HN
+    }
+}
+volunteerStudentAbstract.id = "abc-123"; //  STATIC METHOD
+;
+// Create an instance of VolunteerStudentMe
+const volunteerAbctract = new volunteerStudentAbstract("Raza", 20);
+volunteerMe.addSkill("html");
+volunteerMe.addSkill("teaching");
+volunteerMe.willVolunteerIn = ["apple"];
+console.log(volunteerStudentMath.id);
+console.log(volunteerMe.getSkills());
+console.log(volunteerMe.willVolunteerIn); //  GETTER KA FYDA YE HOTA HE CALL KARNE KI ZORORAT NAHI HOTI LAGTA METHOD KI TARAH HE PAR BEHAVE PROPERTY KI TARAH KARE GA
+// (END)
 //# sourceMappingURL=app.js.map
