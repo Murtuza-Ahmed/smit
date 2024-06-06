@@ -230,7 +230,7 @@ console.log(volunteerMe.willVolunteerIn);   //  GETTER KA FYDA YE HOTA HE CALL K
  * Ek rule define karte hn agar apko ye kam karna he to apko is rule se chalna pare ga
  * method ko Abstract karne ke bad pori class ko abstract karna pare ga
  */
-// ABSTRACT AND SINGLETONS
+// ABSTRACT
 
 abstract class StudentAbstract {
     name: string;
@@ -290,3 +290,37 @@ console.log(volunteerStudentMath.id);
 console.log(volunteerMe.getSkills());
 console.log(volunteerMe.willVolunteerIn);   //  GETTER KA FYDA YE HOTA HE CALL KARNE KI ZORORAT NAHI HOTI LAGTA METHOD KI TARAH HE PAR BEHAVE PROPERTY KI TARAH KARE GA
 // (END)
+
+
+
+/**
+ *  SINGLETONS basic typescript ka part nahi he ye normal rule he jo programing languge me use hota he
+ * Singletons ek pattren he jiske ander ham kisi bhi class ko ristrict kar dete hn ke sirf uska ek hi
+ * object bane ek hi bar wo initilazie ho.
+ * class ek ho or ek hi object bane ek se zyada object na bane
+ * (POINT) class ke constructor ko private karden ge isse class direct initilize nai ho sakta
+ * (POINT) Constructor of class 'Human' is private and only accessible within the class declaration.
+ * (POINT) ye object bana sakti he lekin class ke ander rhete hwe class ke bahir nai bana sakte
+ */
+//  SINGLETONS
+
+class Human {
+
+    static object: Human    //  Ander rhete hwe abject ban raha he ye initilize nai ho raha he
+
+    private constructor(private name: string) { }
+
+    static getObject(name: string) {  //  ander rhe kar inithilize kar rahe hn ander rhe kar static ka method bnayen ge
+        if (this.object) {
+            return this.object
+        } else {
+            this.object = new Human(name)
+            return this.object
+        }
+    }
+}
+
+const singletons = Human.getObject("Ahmed");
+const singletons1 = Human.getObject("Raza");
+
+console.log(singletons, singletons1);
