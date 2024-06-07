@@ -33,9 +33,9 @@ class Human implements Person {
  */
 
 
-// ADVANCED TYPES
+// ADVANCED TYPES   (START)
 
-// type Combindes = string | number
+// type Combindes = string | number (|) Union type
 
 let abc: Combined;
 abc = 26;
@@ -43,3 +43,89 @@ abc = "sheroz";
 console.log(abc)
 
 console.log("ahmed")
+
+// END
+
+
+/**
+ * (INTERSECTION TYPE)  START
+ * 
+ * intersection multiple type bata sakte hn
+ * (&) is sign ka matlab ke do type
+ */
+
+type Bird = {
+    name: string;
+    flyingSpeed: number;
+}
+type Animal = {
+    name: string;
+    runningSpeed: number;
+}
+
+type Creature = Bird & Animal;
+
+let a: Creature;
+
+a = {
+    name: "shikra",
+    flyingSpeed: 20,
+    runningSpeed: 0,
+}
+
+console.log(a);
+
+// END
+
+
+/**
+ * TYPE GUARDS  START
+ */
+
+type BirdSky = {
+    name: string;
+    flyingSpeed: number;
+}
+type AnimalEarth = {
+    name: string;
+    runningSpeed: number;
+}
+
+type CreatureMul = BirdSky & AnimalEarth;
+
+function animalLog(creature: CreatureMul) {
+    console.log(creature.name);
+    if ("flyingSpeed" in creature) {
+        console.log("FlyingSpeed " + creature.flyingSpeed);
+    }
+    if ("runningSpeed" in creature) {
+        console.log("RunningSpeed " + creature.runningSpeed)
+    }
+}
+
+animalLog({ name: "hourse", flyingSpeed: 0, runningSpeed: 27 })
+
+// Type Guards Classes
+
+class BirdFly {
+    constructor(public name: string, public flyingSpeed: number) { }
+}
+class AnimalRun {
+
+    constructor(public name: string, public runningSpeed: number) { }
+}
+
+type CreatureBA = BirdFly & AnimalRun;
+
+function animal(creature: CreatureBA) {
+    console.log(creature.name);
+    if (creature instanceof BirdFly) {
+        console.log("FlyingSpeed " + creature.flyingSpeed);
+    }
+    if (creature instanceof AnimalRun) {
+        console.log("RunningSpeed " + creature.runningSpeed)
+    }
+}
+
+animal(new AnimalRun("dog", 20))
+animal(new BirdFly("shikra",30))

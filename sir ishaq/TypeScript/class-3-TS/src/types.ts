@@ -10,3 +10,18 @@ export interface Person {
  */
 
 export type Combined = string | number;
+
+
+/**
+ * INTERSECTION TYPE
+ */
+type Bird = {
+    name: string;
+    flyingSpeed: number;
+}
+type Animal = {
+    name: string;
+    runningSpeed: number;
+}
+
+export type Creature = Bird & Animal;
