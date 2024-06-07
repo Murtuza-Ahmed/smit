@@ -115,7 +115,18 @@ class AnimalRun {
     constructor(public name: string, public runningSpeed: number) { }
 }
 
-type CreatureBA = BirdFly & AnimalRun;
+type CreatureBA = BirdFly | AnimalRun;  /**function me agra class chalaen ge phir (&) nahi (|) union lage ga or agar (&) lagate hn to phele const define karna hoga example */
+
+//  type CreatureBA = BirdFly & AnimalRun;   //  eaxmple
+
+// // Creating an object that has both flyingSpeed and runningSpeed
+// const creature: CreatureBA = {
+//     name: "gryphon",
+//     flyingSpeed: 100,
+//     runningSpeed: 50,
+//     // Both constructors won't be used directly here, it's a composite object
+// };
+
 
 function animal(creature: CreatureBA) {
     console.log(creature.name);
@@ -128,4 +139,5 @@ function animal(creature: CreatureBA) {
 }
 
 animal(new AnimalRun("dog", 20))
-animal(new BirdFly("shikra",30))
+animal(new BirdFly("shikra", 30))
+// animal(creatura:any);

@@ -63,6 +63,14 @@ class AnimalRun {
         this.runningSpeed = runningSpeed;
     }
 }
+//  type CreatureBA = BirdFly & AnimalRun;   //  eaxmple
+// // Creating an object that has both flyingSpeed and runningSpeed
+// const creature: CreatureBA = {
+//     name: "gryphon",
+//     flyingSpeed: 100,
+//     runningSpeed: 50,
+//     // Both constructors won't be used directly here, it's a composite object
+// };
 function animal(creature) {
     console.log(creature.name);
     if (creature instanceof BirdFly) {
@@ -74,5 +82,5 @@ function animal(creature) {
 }
 animal(new AnimalRun("dog", 20));
 animal(new BirdFly("shikra", 30));
-export {};
+// animal(creatura:any);
 //# sourceMappingURL=app.js.map
