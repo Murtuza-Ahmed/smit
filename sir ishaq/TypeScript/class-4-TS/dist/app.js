@@ -40,9 +40,12 @@ console.log(meargeData);
  * (point) decorators function banate waqt first letter capital hoga
  * (point) class ke sath decorators use karne kylye (@) use karna pare ga
  * (@) ka matlab typescript me Decorators he
+ * (point) decorators ke function ke parameter me constructor ka istemal karen ge
  */
-function Logger(_) {
-    console.log("logging...");
+function Logger(data) {
+    return function (_) {
+        console.log("logging... " + data);
+    };
 }
 ;
 let Person = class Person {
@@ -52,7 +55,68 @@ let Person = class Person {
     }
 };
 Person = __decorate([
-    Logger
+    Logger("data")
 ], Person);
 const myName = new Person();
+// DECORATORS CONNECT HTML TAG P
+function LogPerson(data) {
+    return function (_) {
+        console.log("logging... " + data);
+    };
+}
+function FillHTML(template, id) {
+    return function (_) {
+        const elem = document.getElementById(id);
+        if (elem) {
+            elem.innerHTML = template;
+        }
+    };
+}
+let NewPerson = class NewPerson {
+    constructor() {
+        this.name = "ahmed";
+        console.log("called");
+    }
+};
+NewPerson = __decorate([
+    LogPerson("data"),
+    FillHTML("<b>This My data</b>", "app")
+], NewPerson);
+const newName = new NewPerson();
+function add(a, b) {
+    if (typeof (a) === "number" && typeof (b) === "number") {
+        return a + b;
+    }
+    else if (typeof a === "string" && typeof b === "string") {
+        return a + b;
+    }
+    else {
+        throw Error("Type Check Kar");
+    }
+}
+console.log(add(1, 2));
+console.log(add("abc", "def"));
+// console.log(add(1, "a"));
+add("abc", "abc").split(" ");
+add(1, 3).toFixed();
+function add1(a, b) {
+    if (typeof (a) === "number" && typeof (b) === "number") {
+        return a + b;
+    }
+    else if (typeof a === "string" && typeof b === "string") {
+        return a + b;
+    }
+    else if (typeof a === "string" && typeof b === "number") {
+        throw Error("Type Check Kar");
+    }
+    else if (typeof a === "number" && typeof b === "string") {
+        throw Error("Type Sahi se Check Kar");
+    }
+}
+console.log(add1(1, 2));
+console.log(add1("abc", "def"));
+console.log(add1(1, "a"));
+console.log(add1("a", 2));
+add1("abc", "abc").split(" ");
+add1(1, 4).toFixed();
 //# sourceMappingURL=app.js.map
