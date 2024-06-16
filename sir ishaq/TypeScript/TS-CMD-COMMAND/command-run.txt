@@ -1,0 +1,12 @@
+1: tsc --watch	// TYPESCRIPT / JAVASCRIPT KO UPDATE KARTA RAHE GA
+2: tsc --init	// TS CONFIG FILE JSON CREATE HOGA
+3: tsc app.ts	// TYPESCRIPT CONVERT HOGA JAVASCRIPT PAR
+4: tsc		// CONFIG FILE CREATE HONE KE BAD (tsc) LIKH NE SE FILE J/S ME CONVERT HO JAYE GA
+	
+	[CONFIG FILE CREATE HONE KE BAD CHANGING]
+1: EMIT	// source map commit out karna he USKE BAD (tsc) COMMAND CHALANA HE
+2: outDir: ./dist // COMMIT OUT KARKE (dist) RAKHNA HE dist ME JS KI FILE HOGI
+3: rootDir: ./src // COMMIT OUT KARKE (src) RAKHNA HE src ME TS KI FILE HOGI
+
+	[DECORATORS]
+1: decorators	// Language and Environment ME JAKE ("experimentalDecorators": true,) COMMIT OUT SE HATANA HOGA
