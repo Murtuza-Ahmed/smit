@@ -8,9 +8,7 @@ export default function Lists({ arr }) {
     return (
         <>
             <ul>
-                {arr.map((item) => {
-                    return <Items text={item} />
-                })}
+                {arr.map((item, index) => <Items key={index} text={item} />)}
                 {/* {items} */}
                 {/* <Items text={arr[0]} /> */}
                 {/* <Items text={arr[1]} /> */}
