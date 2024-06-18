@@ -1,0 +1,4 @@
+1:{
+     (POINT) Component ke bich me <tag></tag> ke ander kuch likha he or us value ko get
+      karna he to (children) se get karen ge 
+}
