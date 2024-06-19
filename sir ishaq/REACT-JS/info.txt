@@ -7,3 +7,9 @@
 2: {
     > React me (style) dete waqt style me ek object pass karen ge style={{}}
 }
+
+3: {
+    > (CHILD TO PARENT) child se parent data dene kylye (props) hota he but is me (values) ya data nahi
+    jaye ga balke (method) jaye ga. parent khud bataye ga ye wala kam ho ye (method) call kardena. (child)
+    us method ko call karde ga. 
+}

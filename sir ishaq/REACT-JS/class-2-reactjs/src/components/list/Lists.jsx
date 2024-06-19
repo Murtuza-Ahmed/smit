@@ -1,8 +1,12 @@
 import Items from "../item/Items";
+import PropTypes from "prop-types";
 
-function Lists() {
-  const arr = ["item 1", "item 2", "item 3", "item 4", "item 5"];
+Lists.propTypes = {
+  arr: PropTypes.array.isRequired,
+};
 
+function Lists({ arr }) {
+  console.log("ARRAY", arr);
   const items = arr.map((item, index) => {
     return <Items key={"no-" + index} title={item} />;
   });
