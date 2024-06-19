@@ -1,4 +1,5 @@
 import "./App.css";
+import AddItem from "./components/additem/AddItem";
 import Lists from "./components/list/Lists";
 
 function App() {
@@ -18,10 +19,11 @@ function App() {
         className={`my-class ${bool && "app"}`}
         style={{ backgroundColor: col ? "#000" : "#61da" }}
       >
+        <AddItem />
         My React App
         <Lists />
       </div>
-      
+
       {/* <div className={cls}>
         <Lists />
       </div> */}
