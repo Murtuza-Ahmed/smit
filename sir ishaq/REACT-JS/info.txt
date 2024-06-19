@@ -13,3 +13,9 @@
     jaye ga balke (method) jaye ga. parent khud bataye ga ye wala kam ho ye (method) call kardena. (child)
     us method ko call karde ga. 
 }
+
+<!----------------------------------CLASS-2 REACT END--------------------------------->
+
+<!----------------------------------CLASS-3 REACT START--------------------------------->
+                    
+                    CLASS-3 REACT-JS (Context API / useContext | useEffect, useEffect cleanup)
