@@ -3,3 +3,7 @@
     > Esa Component jis ke ander state use ho raha ho wo StateFull Component hoga
     > Esa Component jis ke ander state use nai ho raha ho wo StateLess Component hoga
 }
+
+2: {
+    > React me (style) dete waqt style me ek object pass karen ge style={{}}
+}
