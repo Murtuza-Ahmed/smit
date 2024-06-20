@@ -1,10 +1,21 @@
+$-bg-color: #646cffaa;
+$-color: #888;
+
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
-
+.App {
+  text-align: center;
+  .first {
+    background-color: $-bg-color;
+    color: $-color;
+  }
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -29,6 +40,9 @@
 
 .container {
   background-color: #646cffaa;
+  &:hover {
+    background-color: #61dafbaa;
+  }
   .child {
     color: #888;
     .grand-child {
