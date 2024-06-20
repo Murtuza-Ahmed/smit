@@ -16,8 +16,15 @@ function App() {
 
   return (
     <>
-      <AuthContext.Provider value={{ isLoggedIn: isAuthenticated }}>
-        <AuthHandler onLogin={onLogin} onLogout={onLogout} />
+      <AuthContext.Provider
+        value={{
+          isLoggedIn: isAuthenticated,
+          onLogin: onLogin,
+          onLogout: onLogout,
+        }}
+      >
+        <AuthHandler />
+        {/* <AuthHandler onLogin={onLogin} onLogout={onLogout} /> */}
         {/* isAuthenticated ? <AppRouter /> : <AuthRouter onLogin={onLogin} /> */}
       </AuthContext.Provider>
     </>

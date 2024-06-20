@@ -24,3 +24,10 @@
     > Multiple Context Bhi Ho sakte hn. Authentication Context, CardItem Context, All over data 
     agar chaye to usse Context me rakhen ge.
 }
+
+2: {
+    > (HOW TO USE PROVIDER) jab context create karte hn to context ke ander ek (object) hota he jiske
+    ander bhot sare method hote hn context ke. usme (PROVIDER) esi chiz hoti he jo (element) ki tarah 
+    bihave karta he ract ke. (.PROVIDER) karke karte hn to wo ek element ban jata he. PROVIDER ke 
+    element ke ander jo bhi hoga un sab ko us context ke data ka (access) hoga. 
+}

@@ -1,14 +1,17 @@
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
+import { useContext } from "react";
+import AuthContext from "../../context/AuthContext";
 
-Home.propTypes = {
-  onLogout: PropTypes.func.isRequired,
-};
+// Home.propTypes = {
+//   onLogout: PropTypes.func.isRequired,
+// };
 
-function Home({ onLogout }) {
+function Home() {
+  const authCtx = useContext(AuthContext);
   return (
     <>
       <div>Home</div>
-      <button onClick={onLogout}>Logout</button>
+      <button onClick={authCtx.onLogout}>Logout</button>
     </>
   );
 }
