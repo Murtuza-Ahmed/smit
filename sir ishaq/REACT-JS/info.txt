@@ -31,3 +31,10 @@
     bihave karta he ract ke. (.PROVIDER) karke karte hn to wo ek element ban jata he. PROVIDER ke 
     element ke ander jo bhi hoga un sab ko us context ke data ka (access) hoga. 
 }
+
+3: {
+    > (useEffect cleanup func Important) useEffect ka cleanup func islye important hota he. aksar esi 
+    condition ajati he. us useEffect ko call karne se phele (usse phele wala useEffect usko dekhna chate hn)
+    uske ander kia hwa he uske ander phele se kam start je usko khatam kar saken. 
+    (useEffect ka hi function hota he cleanup function) useeffetc ke ander se (return ()=>{}) function bhejta he
+}

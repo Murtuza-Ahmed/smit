@@ -11,8 +11,15 @@ function Login() {
   const [data1, setData1] = useState("");
   const [isValid, setIsValid] = useState(false);
   useEffect(() => {
-    console.log("click");
-    setIsValid(data.length >= 6);
+    console.log("useeffect");
+    // setIsValid(data.length >= 6);
+    const timeOut = setTimeout(() => {
+      console.log("useeffect => settimeout");
+      setIsValid(data.length >= 6);
+    }, 1000);
+    return () => {
+      clearTimeout(timeOut);
+    };
   }, [data]);
   const onTextHandler = (event) => {
     setData(event.target.value);
