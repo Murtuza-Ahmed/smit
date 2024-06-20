@@ -19,3 +19,8 @@
 <!----------------------------------CLASS-3 REACT START--------------------------------->
                     
                     CLASS-3 REACT-JS (Context API / useContext | useEffect, useEffect cleanup)
+
+1: {
+    > Multiple Context Bhi Ho sakte hn. Authentication Context, CardItem Context, All over data 
+    agar chaye to usse Context me rakhen ge.
+}
