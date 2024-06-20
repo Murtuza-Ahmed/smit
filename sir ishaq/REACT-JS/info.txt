@@ -44,3 +44,10 @@
 <!----------------------------------CLASS-4 REACT START--------------------------------->
 
                     CLASS-4 REACT-JS (SASS/SCSS | REACT ROUTER | FETCH API)
+
+1: {
+    > Sass (Syntactically Awesome Style Sheets) is a preprocessor scripting language that is interpreted 
+    or compiled into CSS. It extends CSS with variables, nested rules, and functions, among other features.
+    The code you provided uses the @use "sass:math"; directive, which allows the use of mathematical 
+    functions from the math module in Sass.
+}
