@@ -1,11 +1,17 @@
 # React + Vite
 
-> The component which is used in other states will be a StateFull Component.
-> A component which is not used in any other state will be a Stateless Component.
+> There can be multiple contexts also. AuthenticationContext, CarditemContext, All Over Data 
+If there were any shadows then they were kept in context.
 
-Currently, two official plugins are available:
+> (HOW TO USE PROVIDER) When we create a context, we get another object from the context.
+And there are many other methods based on context. In us (PROVIDER) this thing is like that (element) 
+He behaves and behaves. (.PROVIDER) to create an element. PROVIDER's 
+Whatever happens inside the element will have access to the data of our context.
 
-(From Child to Parent) In order to pass data from the child to the parent, we use props, but instead of passing values or data, we pass a method. The parent will specify which action needs to be taken, and the child will call that method as needed.
+(useEffect cleanup func Important) useEffect's cleanup func is therefore important. often this 
+condition has come. Let us useEffect be called (we can see the useEffect that is completed)
+What has happened to him has started before his other has even started so that he can finish him off. 
+(the function of useEffect is the cleanup function) and the (return ()=>{}) function is sent from the other side of useeffect.
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

@@ -38,3 +38,5 @@
     uske ander kia hwa he uske ander phele se kam start je usko khatam kar saken. 
     (useEffect ka hi function hota he cleanup function) useeffetc ke ander se (return ()=>{}) function bhejta he
 }
+
+<!----------------------------------CLASS-3 REACT END--------------------------------->
