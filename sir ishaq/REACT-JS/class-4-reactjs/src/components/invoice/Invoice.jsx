@@ -1,9 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Invoice = () => {
+  let params = useParams();
+  console.log(params)
   return (
     <>
-      Invoice: Invoice Data
+      Invoice: {params.invoiceId}
       <div>
         <Link to="/">Home</Link>
       </div>
