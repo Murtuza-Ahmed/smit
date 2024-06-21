@@ -1,9 +1,11 @@
 import "./App.scss";
+import Routes from "./routes/Routes.jsx";
 
 function App() {
   return (
     <>
-      <div className="App">
+      <Routes />
+      {/* <div className="App">
         <div className="first">First</div>
         <div className="second">Second</div>
         <div className="thired">Thired</div>
@@ -13,7 +15,7 @@ function App() {
         Container_Scss
         <article role="main">Main Content</article>
         <aside role="complementry">Side Bar</aside>
-      </div>
+      </div> */}
     </>
   );
 }

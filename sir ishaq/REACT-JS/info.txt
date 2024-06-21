@@ -51,3 +51,8 @@
     The code you provided uses the @use "sass:math"; directive, which allows the use of mathematical 
     functions from the math module in Sass.
 }
+
+2: {
+    (ROUTING PARAMETERS) some time nahi pata hota url kia bane ga kia (path) aye ga yaha par.
+    isko handle karnme kylye ROUTING PARAMETERS use karte hn
+}
