@@ -56,3 +56,18 @@
     (ROUTING PARAMETERS) some time nahi pata hota url kia bane ga kia (path) aye ga yaha par.
     isko handle karnme kylye ROUTING PARAMETERS use karte hn
 }
+
+3: {
+    (API) Aplication-Programming-Interface
+}
+
+4: {
+    fetch hote waqt by default api get ho raha hota he. method deke batana parta he api (get) he ya (post).
+    forExample => fetch("https://jsonplaceholder.typicode.com/todos/1", { method: "Post" }) 
+}
+
+5: {
+    (FETCH) fetch do argument leta he. 1 > URL 2 > OPTIONAL
+    1: phele me api batana hota he or ye necesary hota he.
+    2: second argument me request ki configration batate hn. request ke waqt (type, method, body, headers) 
+}
