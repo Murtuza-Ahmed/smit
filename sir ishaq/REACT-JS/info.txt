@@ -71,3 +71,20 @@
     1: phele me api batana hota he or ye necesary hota he.
     2: second argument me request ki configration batate hn. request ke waqt (type, method, body, headers) 
 }
+
+<!----------------------------------CLASS-4 REACT END--------------------------------->
+
+<!----------------------------------CLASS-5 REACT START--------------------------------->
+
+                    CLASS-5 REACT-JS (CORE REDUX | REDUX WITH REACTJS)
+
+1: {
+    Redux kam basic state maneg karta he. state maneg data hoti he. hamare application ka data he through
+    out the app travel kar raha he jisko hamne change karna he dikhana he add karna ye sab redux 
+    kar raha hota he.
+}
+
+2: {
+    core redux install karne kylye (npm init -y) (-y) is lye lagate hn install ke doran sab ko yes karde.
+    phir npm i redux
+}
