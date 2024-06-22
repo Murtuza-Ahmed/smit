@@ -1,4 +1,4 @@
-export default function Sheroz() {
+function Sheroz() {
     return (
         <>
             <h1>hello</h1>
@@ -6,3 +6,5 @@ export default function Sheroz() {
         </>
     )
 }
+
+export default Sheroz
