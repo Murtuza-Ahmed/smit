@@ -1,0 +1,24 @@
+<!----------------- CLASS-2 START NEXT-JS ----------------->
+
+                    CLASS-2 NEXT-JS (Components, Props, Method, Lists & State)
+
+
+1:{
+     (POINT) Component ke bich me <tag></tag> ke ander kuch likha he or us value ko get
+      karna he to (children) se get karen ge 
+}
+
+2:{
+    (point) React ke ander jitne bhi (var) use kiye hn, un (var) me jab bhi update hoga React usse
+    update nai karega, React usi (var) ko updaet karega jo (state) se bana ho. 
+}
+
+<!----------------- CLASS-2 END NEXT-JS ----------------->
+
+<!----------------- CLASS-3 START NEXT-JS ----------------->
+
+                    CLASS-3 NEXT-JS (Applying Styles, Icons & UI Libraries, Component Type & Life Cycles)
+
+1: {
+    
+}
