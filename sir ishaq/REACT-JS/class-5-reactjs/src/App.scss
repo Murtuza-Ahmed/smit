@@ -1,0 +1,84 @@
+@use "sass:math";
+
+$-bg-color: #646cffaa;
+$-color: #888;
+
+@mixin theme($theme: DarkGray) {
+  background: $theme;
+  box-shadow: 0 0 1px rgba($theme, 0.25);
+  color: #fff;
+}
+
+%access-text {
+  border: 1px solid #ff0000;
+  color: blue;
+  background-color: #888;
+}
+
+.App {
+  text-align: center;
+  .first {
+    background-color: $-bg-color;
+    color: $-color;
+  }
+  .second {
+    @include theme();
+    position: relative;
+    &:hover {
+      cursor: pointer;
+    }
+    &::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-color: aqua;
+      position: absolute;
+    }
+    &::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-color: aquamarine;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .thired {
+    @include theme($theme: Red);
+  }
+  .four {
+    @extend %access-text;
+  }
+}
+
+.container-scss {
+  // display: flex;
+  background-color: #888;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+article[role="main"] {
+  width: math.div(600px, 950px) * 100%;
+}
+
+aside[role="complementry"] {
+  width: math.div(300px, 960px) * 100%;
+  margin-left: auto;
+}
+
+.container {
+  background-color: #646cffaa;
+  &:hover {
+    background-color: #61dafbaa;
+  }
+  .child {
+    color: #888;
+    .grand-child {
+      border: solid 1px;
+    }
+  }
+}
