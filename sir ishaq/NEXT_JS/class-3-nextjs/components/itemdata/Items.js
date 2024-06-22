@@ -3,9 +3,12 @@ import { Card, Divider } from 'antd';
 const { Meta } = Card;
 import { AiOutlineLike } from 'react-icons/ai';
 import { BiComment } from 'react-icons/bi';
-console.log("CARD", Card)
+// console.log("CARD", Card)
 
-function Item({ data }) {
+import { Divider } from "antd"
+
+function Items({ data }) {
+    return
     return (
         <Card
             hoverable
@@ -26,4 +29,8 @@ function Item({ data }) {
     );
 }
 
-export default Item;
+
+export default Items;
+
+
+
