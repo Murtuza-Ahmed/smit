@@ -28,3 +28,13 @@
     component ke destroy hone par event loops se clear karwana pare ga. agar esa nai kiye to component destroy
     hojaye ga. but setintervel chalta rahe ga.
 }
+
+<!----------------- CLASS-2 END NEXT-JS ----------------->
+
+<!----------------- CLASS-4 START NEXT-JS ----------------->
+
+                     CLASS-4 NEXT-JS (STATIC & DYNAMIC ROUTES)
+
+1: {
+    
+}
