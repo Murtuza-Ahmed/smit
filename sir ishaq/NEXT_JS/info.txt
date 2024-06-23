@@ -20,5 +20,11 @@
                     CLASS-3 NEXT-JS (Applying Styles, Icons & UI Libraries, Component Type & Life Cycles)
 
 1: {
-    
+    3 step pe component destroy hota he. first time jab screen load hoti he, second time jab screen puri load 
+    ho jati he, thired time jab screen load h jata he phir slow slow component destroy hona shuru ho jata he.
+}
+
+2: {
+    component ke destroy hone par event loops se clear karwana pare ga. agar esa nai kiye to component destroy
+    hojaye ga. but setintervel chalta rahe ga.
 }
