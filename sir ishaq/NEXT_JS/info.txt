@@ -36,5 +36,9 @@
                      CLASS-4 NEXT-JS (STATIC & DYNAMIC ROUTES)
 
 1: {
-    
+    (Dynamic Page Pattren) agar dynamic value chaye to squre baraket lagayen ge [].
+}
+
+2: {
+    (nasted dynamic route) 
 }
