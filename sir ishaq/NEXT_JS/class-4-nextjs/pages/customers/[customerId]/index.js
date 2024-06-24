@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router"
 
 
@@ -9,7 +10,7 @@ export default function () {
         <>
             <h1>Customers {customerId} Detail Page</h1>
             <h2>Projects</h2>
-            <a>Go to this Customers Project List</a>
+            <Link href={`/customers/${customerId}/project`}>Go to this Customers Project List</Link>
         </>
     )
 }
