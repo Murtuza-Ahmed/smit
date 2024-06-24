@@ -53,3 +53,13 @@
     [SLUGS] esa route ko khete hn. Exmaple(mujhe blog chaye 2012 ke 6 mahine ki 1 tareekh ki) to usko banane 
     kylye. ham squre baraket banake... 3 dot phir us Directry ka name likh te hn[...slugs]
 }
+
+<!----------------- CLASS-4 END NEXT-JS ----------------->
+
+<!----------------- CLASS-5 START NEXT-JS ----------------->
+
+                    CLASS-5 NEXT-JS (ClientSide vs ServerSide Rendring | getStaticProps & getStaticPaths)
+
+1: {
+    
+}
