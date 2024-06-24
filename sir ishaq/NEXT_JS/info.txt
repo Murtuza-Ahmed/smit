@@ -37,8 +37,14 @@
 
 1: {
     (Dynamic Page Pattren) agar dynamic value chaye to squre baraket lagayen ge [].
+    [dynamic value].js ya jsx.
 }
 
 2: {
     (nasted dynamic route) 
+}
+
+3: {
+    (Directry) Directry bana ne kylye bhi [] squre baraket ka istemal hota he but isme koi name nai dete hn.
+    exp [Directry]
 }
