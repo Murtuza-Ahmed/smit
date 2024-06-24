@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <h1>Home Page</h1>
       <h2>Our Costomers</h2>
-      <a>Go to Customers</a>
+      <Link href="/customers">Go to Customers</Link>
     </>
   )
 }

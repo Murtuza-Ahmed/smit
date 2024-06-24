@@ -1,12 +1,14 @@
+import Link from "next/link";
+
 export default function () {
     return (
         <>
             <h1>Costomers Page</h1>
             <ul>
                 <li>
-                    <a>Sheroz</a>
+                    <Link href="customers/sheroz">Sheroz</Link>
                     <br />
-                    <a>Raza</a>
+                    <Link href="customers/raza">Raza</Link>
                 </li>
             </ul>
         </>
