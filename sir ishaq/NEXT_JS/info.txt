@@ -48,3 +48,8 @@
     (Directry) Directry bana ne kylye bhi [] squre baraket ka istemal hota he but isme koi name nai dete hn.
     exp [Directry]
 }
+
+4: {
+    [SLUGS] esa route ko khete hn. Exmaple(mujhe blog chaye 2012 ke 6 mahine ki 1 tareekh ki) to usko banane 
+    kylye. ham squre baraket banake... 3 dot phir us Directry ka name likh te hn[...slugs]
+}
