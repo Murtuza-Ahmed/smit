@@ -1,6 +1,8 @@
 // import Link from "next/link";
 // import { notFound } from "next/navigation";
 
+import Head from "next/head"
+
 export default function Home(props) {
   const { title, todos } = props
 
@@ -18,6 +20,10 @@ export default function Home(props) {
 
   return (
     <>
+      <Head>
+        <title>My NextJS Page Content</title>
+        <meta name="description" content="This Is Dummy Page" />
+      </Head>
       <h2>{title}</h2>
       <h3>{todoList}</h3>
     </>
@@ -26,7 +32,8 @@ export default function Home(props) {
 
 export async function getServerSideProps(context) {
   console.log(context)
-  const response = await fetch("https://jsonplaceholder.typicode.com/todos/");
+  // const response = await fetch("https://jsonplaceholder.typicode.com/todos/");
+  const response = await fetch("https://jsonplaceholder.typicode.com/posts/");
   const data = await response.json();
   return {
     props: {

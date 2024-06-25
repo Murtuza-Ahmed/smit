@@ -148,5 +148,10 @@
     5:{
         next-js ek chiz or offer karta he. next-js ke sath iske uper rhete hwe hi ap ServerSide rendring
         ke sath ClientSideRendring bhi karwa sakte hn.
+
+        ServerSideRandring agai he to ClientSideRendring kiu karenga? forExample
+        Ecommerce ka koi page bana rahe hn. ab uske uper hame chaye (SEO). searchEngingOptimezation
+        us product ko read kare ga. jab log google pe us product ko search karen ge tabi website samne ayegi.
+        (SEO chaye to ServerSideRandring chaye).
     }
 ]
