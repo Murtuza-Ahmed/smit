@@ -155,3 +155,17 @@
         (SEO chaye to ServerSideRandring chaye).
     }
 ]
+
+<!----------------- CLASS-6 END NEXT-JS ----------------->
+
+<!----------------- CLASS-7 START NEXT-JS ----------------->
+
+                    CLASS-7 NEXT-JS (Creating & Using APIs in Next-JS | Local JSON Database with NodeJS)
+
+[
+    1:{
+        (APIs) Ko Kiu Use Karte Hn? 
+        Front-end ko jo bhi data required he. wo back-end se mange ga. back-end se data mangwa ne
+        kylye koi na koi cominucation chaye hota he bich me. uske zarye Front-end me data aye ga.
+    }
+]
