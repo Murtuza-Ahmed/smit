@@ -100,3 +100,27 @@
     fallback me agar blocking likh den to condition batane ki zarorat nai pare gi. loading ki.
     > fallback blocking ka matlab he jab tak api chal rahi he. browser ko data mat do.
 }
+
+<!----------------- CLASS-5 END NEXT-JS ----------------->
+
+
+<!----------------- CLASS-6 START NEXT-JS ----------------->
+
+                    CLASS-6 NEXT-JS (Hybrid Rendring | getServerSideProps & Other Concepts)
+
+1: {
+    next-js me do tarike ki ServerSide rendring hoti he. 1:(Static Generation) 2:(ServerSide Rendring).
+    Static Generation | ServerSide Rendring > me farq
+
+    => jab ham (getStaticProps) karte hn iska matlab he hota he jis time pe hamari (build) he. yani
+    (AOT) | (JIT) to (getStaticPaths) ki puri kosish hoti he ke zyada se zyada jo chizen hn rendring kylye
+    wo sari chizen (AOT) pe jayen.
+
+    => ServerSideRendring me sari chizen (JIT) pe hongi.
+}
+
+2: {
+    jab ham (getStaticProps) ka function use karte hn. to getStaticProps ke ander ham kisi bhi (data) ko
+    (prefetch) karlete hn or apne page ko pass kar dete hn. (next-js build ke time pe data ko mangwa leta 
+    he or mangwa ke template bana ke apne pass phele se template rakh leta he). isi ko khete hn (AOT).
+}
