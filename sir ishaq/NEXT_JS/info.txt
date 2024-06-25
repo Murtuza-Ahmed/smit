@@ -61,5 +61,42 @@
                     CLASS-5 NEXT-JS (ClientSide vs ServerSide Rendring | getStaticProps & getStaticPaths)
 
 1: {
-    
+    (RENDRING) kia hoti he, render khete hn kisi bhi dynamic content ko apke (view) ke ander rakh dena.
+}
+
+2: {
+    (ServerSideRendring) ServerSide me template or content alag alag hota he. jab Server ko hith karte hn.
+    to Server dono ko bind kia render kia or ek complete HTML bhej dya. 
+}
+
+3: {
+    (ClientSideRendring) ClientSideRendring me hamare pass jab bhi Server se koi bhi content ata he. to wo
+    pura template uth kar ajata he. usme koi data nahi laga hota.
+
+    > ClientSide sirf HTML ka template utha ke deti he phir ClientSide Libraries Server ko hith karti he. or
+    baqi ka content mangwati he.
+}
+
+4: {
+    (POINT) prevRender => phele hi har chiz render ho chuki he. jo data template me jaha lagna tha waha lag chuka he.
+    ClientSide me searchEngingOptimezation nai ho sakta.
+}
+
+5: {
+    (NEXT-js me hamare pass do tareqe ki compailation hoti he). 1:(AOT) 2:(JIT)
+
+    1: (AOT) > Ahead Of Time
+    2: (JIT) > Just In Time
+
+    1: (AOT Ahead Of Time) me jab build banti he. build banne ke time me hi jitna bhi content he wo sara ka sara
+    pull hota he content me or template me lagta he. or wo HTML file redy phele se rakhi hwi rheti he.
+    user agar request kare ga to user ke request pe wo render nahi hoga kiu ke wo render hoke phele se
+    (chache) me rakhi he. (Ahead of Time actuall jo time hota he usse bhi phele)
+
+    2: (JIT Just In Time)  yani usi waqt. Just in time me jab request aye gi usi waqt render hoga.
+}
+
+6: {
+    fallback me agar blocking likh den to condition batane ki zarorat nai pare gi. loading ki.
+    > fallback blocking ka matlab he jab tak api chal rahi he. browser ko data mat do.
 }
