@@ -1,4 +1,4 @@
-import Link from "next/link";
+// import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export default function Home(props) {
@@ -17,20 +17,24 @@ export default function Home(props) {
 }
 
 
-export async function getStaticProps({ params }) {
-    // console.log(params)
-    const { todoId } = params;
-    // console.log(todoId)
-    const response = await fetch(`https://jsonplaceholder.typicode.com/todos/${todoId}`);
-    const data = await response.json();
-    // console.log("DATA", data)
-    return {
-        props: {
-            todo: data
-        },
-        // notFound: false,
-        revalidate: 10,
-    }
+export async function getStaticProps({ params }) {  // iske parameter me hame context milta he
+    try {
+        const { todoId } = params;
+        const response = await fetch(`https://jsonplaceholder.typicode.com/todos/${todoId}`);
+        const data = await response.json();
+        if (!data) {
+            return {
+                notFound: true
+            }
+        }
+        return {
+            props: {
+                todo: data
+            },
+            // notFound: false,
+            revalidate: 10,
+        }
+    } catch (Error) { console.error(`data not found ${Error}`) }
 }
 
 export async function getStaticPaths() {

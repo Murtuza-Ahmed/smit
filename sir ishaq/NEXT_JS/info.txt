@@ -2,16 +2,18 @@
 
                     CLASS-2 NEXT-JS (Components, Props, Method, Lists & State)
 
+[
+    
+    1:{
+        (POINT) Component ke bich me <tag></tag> ke ander kuch likha he or us value ko get
+        karna he to (children) se get karen ge 
+    }
 
-1:{
-     (POINT) Component ke bich me <tag></tag> ke ander kuch likha he or us value ko get
-      karna he to (children) se get karen ge 
-}
-
-2:{
-    (point) React ke ander jitne bhi (var) use kiye hn, un (var) me jab bhi update hoga React usse
-    update nai karega, React usi (var) ko updaet karega jo (state) se bana ho. 
-}
+    2:{
+        (point) React ke ander jitne bhi (var) use kiye hn, un (var) me jab bhi update hoga React usse
+        update nai karega, React usi (var) ko updaet karega jo (state) se bana ho. 
+    }
+]
 
 <!----------------- CLASS-2 END NEXT-JS ----------------->
 
@@ -19,15 +21,17 @@
 
                     CLASS-3 NEXT-JS (Applying Styles, Icons & UI Libraries, Component Type & Life Cycles)
 
-1: {
-    3 step pe component destroy hota he. first time jab screen load hoti he, second time jab screen puri load 
-    ho jati he, thired time jab screen load h jata he phir slow slow component destroy hona shuru ho jata he.
-}
+[
+    1: {
+        3 step pe component destroy hota he. first time jab screen load hoti he, second time jab screen puri load 
+        ho jati he, thired time jab screen load h jata he phir slow slow component destroy hona shuru ho jata he.
+    }
 
-2: {
-    component ke destroy hone par event loops se clear karwana pare ga. agar esa nai kiye to component destroy
-    hojaye ga. but setintervel chalta rahe ga.
-}
+    2: {
+        component ke destroy hone par event loops se clear karwana pare ga. agar esa nai kiye to component destroy
+        hojaye ga. but setintervel chalta rahe ga.
+    }
+]
 
 <!----------------- CLASS-2 END NEXT-JS ----------------->
 
@@ -35,24 +39,26 @@
 
                      CLASS-4 NEXT-JS (STATIC & DYNAMIC ROUTES)
 
-1: {
-    (Dynamic Page Pattren) agar dynamic value chaye to squre baraket lagayen ge [].
-    [dynamic value].js ya jsx.
-}
+[
+    1: {
+        (Dynamic Page Pattren) agar dynamic value chaye to squre baraket lagayen ge [].
+        [dynamic value].js ya jsx.
+    }
 
-2: {
-    (nasted dynamic route) 
-}
+    2: {
+        (nasted dynamic route) 
+    }
 
-3: {
-    (Directry) Directry bana ne kylye bhi [] squre baraket ka istemal hota he but isme koi name nai dete hn.
-    exp [Directry]
-}
+    3: {
+        (Directry) Directry bana ne kylye bhi [] squre baraket ka istemal hota he but isme koi name nai dete hn.
+        exp [Directry]
+    }
 
-4: {
-    [SLUGS] esa route ko khete hn. Exmaple(mujhe blog chaye 2012 ke 6 mahine ki 1 tareekh ki) to usko banane 
-    kylye. ham squre baraket banake... 3 dot phir us Directry ka name likh te hn[...slugs]
-}
+    4: {
+        [SLUGS] esa route ko khete hn. Exmaple(mujhe blog chaye 2012 ke 6 mahine ki 1 tareekh ki) to usko banane 
+        kylye. ham squre baraket banake... 3 dot phir us Directry ka name likh te hn[...slugs]
+    }
+]
 
 <!----------------- CLASS-4 END NEXT-JS ----------------->
 
@@ -60,46 +66,49 @@
 
                     CLASS-5 NEXT-JS (ClientSide vs ServerSide Rendring | getStaticProps & getStaticPaths)
 
-1: {
-    (RENDRING) kia hoti he, render khete hn kisi bhi dynamic content ko apke (view) ke ander rakh dena.
-}
+[
+    1: {
+        (RENDRING) kia hoti he, render khete hn kisi bhi dynamic content ko apke (view) ke ander rakh dena.
+    }
 
-2: {
-    (ServerSideRendring) ServerSide me template or content alag alag hota he. jab Server ko hith karte hn.
-    to Server dono ko bind kia render kia or ek complete HTML bhej dya. 
-}
+    2: {
+        (ServerSideRendring) ServerSide me template or content alag alag hota he. jab Server ko hith karte hn.
+        to Server dono ko bind kia render kia or ek complete HTML bhej dya. 
+    }
 
-3: {
-    (ClientSideRendring) ClientSideRendring me hamare pass jab bhi Server se koi bhi content ata he. to wo
-    pura template uth kar ajata he. usme koi data nahi laga hota.
+    3: {
+        (ClientSideRendring) ClientSideRendring me hamare pass jab bhi Server se koi bhi content ata he. to wo
+        pura template uth kar ajata he. usme koi data nahi laga hota.
 
-    > ClientSide sirf HTML ka template utha ke deti he phir ClientSide Libraries Server ko hith karti he. or
-    baqi ka content mangwati he.
-}
+        > ClientSide sirf HTML ka template utha ke deti he phir ClientSide Libraries Server ko hith karti he. or
+        baqi ka content mangwati he.
+    }
 
-4: {
-    (POINT) prevRender => phele hi har chiz render ho chuki he. jo data template me jaha lagna tha waha lag chuka he.
-    ClientSide me searchEngingOptimezation nai ho sakta.
-}
+    4: {
+        (POINT) prevRender => phele hi har chiz render ho chuki he. jo data template me jaha lagna tha waha lag chuka he.
+        ClientSide me searchEngingOptimezation nai ho sakta.
+    }
 
-5: {
-    (NEXT-js me hamare pass do tareqe ki compailation hoti he). 1:(AOT) 2:(JIT)
+    5: {
+        (NEXT-js me hamare pass do tareqe ki compailation hoti he). 1:(AOT) 2:(JIT)
 
-    1: (AOT) > Ahead Of Time
-    2: (JIT) > Just In Time
+        1: (AOT) > Ahead Of Time
+        2: (JIT) > Just In Time
 
-    1: (AOT Ahead Of Time) me jab build banti he. build banne ke time me hi jitna bhi content he wo sara ka sara
-    pull hota he content me or template me lagta he. or wo HTML file redy phele se rakhi hwi rheti he.
-    user agar request kare ga to user ke request pe wo render nahi hoga kiu ke wo render hoke phele se
-    (chache) me rakhi he. (Ahead of Time actuall jo time hota he usse bhi phele)
+        1: (AOT Ahead Of Time) me jab build banti he. build banne ke time me hi jitna bhi content he wo sara ka sara
+        pull hota he content me or template me lagta he. or wo HTML file redy phele se rakhi hwi rheti he.
+        user agar request kare ga to user ke request pe wo render nahi hoga kiu ke wo render hoke phele se
+        (chache) me rakhi he. (Ahead of Time actuall jo time hota he usse bhi phele)
 
-    2: (JIT Just In Time)  yani usi waqt. Just in time me jab request aye gi usi waqt render hoga.
-}
+        2: (JIT Just In Time)  yani usi waqt. Just in time me jab request aye gi usi waqt render hoga.
+    }
 
-6: {
-    fallback me agar blocking likh den to condition batane ki zarorat nai pare gi. loading ki.
-    > fallback blocking ka matlab he jab tak api chal rahi he. browser ko data mat do.
-}
+    6: {
+        fallback me agar blocking likh den to condition batane ki zarorat nai pare gi. loading ki.
+        > fallback blocking ka matlab he jab tak api chal rahi he. browser ko data mat do.
+    }
+]
+
 
 <!----------------- CLASS-5 END NEXT-JS ----------------->
 
@@ -108,19 +117,36 @@
 
                     CLASS-6 NEXT-JS (Hybrid Rendring | getServerSideProps & Other Concepts)
 
-1: {
-    next-js me do tarike ki ServerSide rendring hoti he. 1:(Static Generation) 2:(ServerSide Rendring).
-    Static Generation | ServerSide Rendring > me farq
+[
+    1: {
+        next-js me do tarike ki ServerSide rendring hoti he. 1:(Static Generation) 2:(ServerSide Rendring).
+        Static Generation | ServerSide Rendring > me farq
 
-    => jab ham (getStaticProps) karte hn iska matlab he hota he jis time pe hamari (build) he. yani
-    (AOT) | (JIT) to (getStaticPaths) ki puri kosish hoti he ke zyada se zyada jo chizen hn rendring kylye
-    wo sari chizen (AOT) pe jayen.
+        => jab ham (getStaticProps) karte hn iska matlab he hota he jis time pe hamari (build) he. yani
+        (AOT) | (JIT) to (getStaticPaths) ki puri kosish hoti he ke zyada se zyada jo chizen hn rendring kylye
+        wo sari chizen (AOT) pe jayen.
 
-    => ServerSideRendring me sari chizen (JIT) pe hongi.
-}
+        => ServerSideRendring me sari chizen (JIT) pe hongi.
+    }
 
-2: {
-    jab ham (getStaticProps) ka function use karte hn. to getStaticProps ke ander ham kisi bhi (data) ko
-    (prefetch) karlete hn or apne page ko pass kar dete hn. (next-js build ke time pe data ko mangwa leta 
-    he or mangwa ke template bana ke apne pass phele se template rakh leta he). isi ko khete hn (AOT).
-}
+    2: {
+        jab ham (getStaticProps) ka function use karte hn. to getStaticProps ke ander ham kisi bhi (data) ko
+        (prefetch) karlete hn or apne page ko pass kar dete hn. (next-js build ke time pe data ko mangwa leta 
+        he or mangwa ke template bana ke apne pass phele se template rakh leta he). isi ko khete hn (AOT).
+    }
+    3:{
+        hamare pass jese (getStaticProps) function hota he. ese hi (getServerSideProps) function bhi hota he.
+        ek hi waqt par dono ko call nahi kara sakte. (getStaticProps > StaticGeneration hota he) OR (getServerSideProps
+        > ServerSideRendring) hota he. 
+        
+        (POINT) (getServerSideProps) kia karta he? getServerSideProps har bar jitni bar bhi request ati he
+        hae bar ap new (DATA fetch render) karke hi isko render karo ge. 
+    }
+    4:{
+        getServerSideProps ke ander bhi sari same chizen hi hoti hn bas iske ander kuch differenc hote hn.
+    }
+    5:{
+        next-js ek chiz or offer karta he. next-js ke sath iske uper rhete hwe hi ap ServerSide rendring
+        ke sath ClientSideRendring bhi karwa sakte hn.
+    }
+]
