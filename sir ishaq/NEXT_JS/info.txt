@@ -168,4 +168,23 @@
         Front-end ko jo bhi data required he. wo back-end se mange ga. back-end se data mangwa ne
         kylye koi na koi cominucation chaye hota he bich me. uske zarye Front-end me data aye ga.
     }
+    2:{
+        (API) Application Programming Interface
+    }
+    3:{
+        5 step of Method.
+        (1: Get 2: Post 3: Put 4: petch 5: Delete)
+
+        1: (Get) get hota he kisi bhi data ko read karne kylye.
+        2: (Post) post hota he data ko create karne kylye.
+        3: (Put) put hota he data ko update karne kylye.
+        4: (Petch) petch data ko parchily updaet karne kylye.
+        5: (Delete) Delete data ko Delete karne kylye.
+    }
+    4:{
+        (fs > filesystem) filesystem ye apke system me jaha par bhi Server chal raha hpota he uska access
+        lake deta he. kisi bhi file ke data ko dekhna he read karna he ye sare kam fs yani filesystem se karen ge.
+        OR fs pe kam karne se phele ek chiz chaye wo he path.
+        (PATH) path ka module kisi bhi file ka path bana ke deta he.
+    }
 ]
