@@ -14,3 +14,12 @@ export function getById(id) {
         return p.id === Number(id)
     })
 }
+
+export function save(title, description, prices) {
+    const data = getAll();
+    data.push({
+        id: data.length + 1,
+        title, description, prices
+    });
+    fs.writeFileSync(filePath, JSON.stringify(data));
+}
