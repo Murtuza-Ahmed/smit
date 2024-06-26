@@ -188,3 +188,22 @@
         (PATH) path ka module kisi bhi file ka path bana ke deta he.
     }
 ]
+
+<!----------------- CLASS-7 END NEXT-JS ----------------->
+
+
+<!----------------- CLASS-8 START NEXT-JS ----------------->
+
+                    CLASS-8 NEXT-JS (Authentication in Next-JS)
+
+[
+    1:{
+        (Two Step basic Authentication)
+        1: section base Authentication.
+        2: token base Authentication.
+    }
+    2:{
+        token base Authentication ke uper ek Libraries he opensource Librarie he jiska name he
+        (JWT json web token)
+    }
+]
