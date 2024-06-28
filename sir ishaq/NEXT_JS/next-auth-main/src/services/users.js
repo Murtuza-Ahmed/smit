@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { hash } from "bcryptjs";
 
 const filePath = path.join(process.cwd(), "src", "data", "users.json");  // currentWorkingDirectry
 
@@ -23,11 +24,17 @@ export function getByEmail(email) {
     })
 }
 
-export function save(email, password) {
+export async function save(email, password) {
+    const found = getAll(email);
+    if (found) {
+        throw new Error("Users All Ready Exits");
+    }
     const data = getAll();
+    const hashedPassword = await hash(password, 12)
     data.push({
         id: data.length + 1,
-        title, description, prices
+        email,
+        password: hashedPassword
     });
     fs.writeFileSync(filePath, JSON.stringify(data));
 }

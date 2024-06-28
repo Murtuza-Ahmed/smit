@@ -206,4 +206,10 @@
         token base Authentication ke uper ek Libraries he opensource Librarie he jiska name he
         (JWT json web token)
     }
+    3:{
+        useRef react ka hi hooks he or ye input ki field se value nikalne me kam ata he.
+    }
+    4:{
+        password ko hide rakhne kylye install karna hoga npm i bcryptjs ye password ko hide rakhe ga.
+    }
 ]
