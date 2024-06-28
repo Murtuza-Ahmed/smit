@@ -1,3 +1,5 @@
 export default function handler(req, res) {
-    res.status(200).json({ name: 'John Doe' })
+    if (req.method !== "POST") {
+        return res.status(404).send();
+    }
 }
