@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { hash } from "bcryptjs";
+import { compare, hash } from "bcryptjs";
 
 const filePath = path.join(process.cwd(), "src", "data", "users.json");  // currentWorkingDirectry
 
@@ -22,6 +22,11 @@ export function getByEmail(email) {
     return data.find((p) => {
         return p.email.toLowerCase() === email.toLowerCase()
     })
+}
+
+export async function verifyPassword(hashedPassword, password) {
+    const isValid = await compare(password, hashedPassword);
+    return isValid;
 }
 
 export async function save(email, password) {
