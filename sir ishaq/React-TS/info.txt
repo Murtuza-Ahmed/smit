@@ -1,0 +1,7 @@
+<!--------------- CLASS-1-REACT-TYPESCRIPT START ------------>
+                (Creating new Project, Components, Props & Lists)
+[
+    1:{
+        
+    }
+]
