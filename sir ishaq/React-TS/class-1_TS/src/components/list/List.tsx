@@ -1,7 +1,11 @@
-function List() {
+import Item from "../item/Item";
+
+function List({ data }: { data: string[] }) {
   return (
     <>
-      <div>WelCome to My React App.</div>
+      <div>
+        <Item data={data[0]} />
+      </div>
     </>
   );
 }
