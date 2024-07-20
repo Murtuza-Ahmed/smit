@@ -1,7 +1,6 @@
 <!--------------- CLASS-1-REACT-TYPESCRIPT START ------------>
                 (Creating new Project, Components, Props & Lists)
-[
-    1:{
-        
-    }
-]
+<!--------------- CLASS-1-REACT-TYPESCRIPT END ------------>
+
+<!--------------- CLASS-2-REACT-TYPESCRIPT START ------------>
+                (UseRef, UseState, Dynamic Components, Styling)
