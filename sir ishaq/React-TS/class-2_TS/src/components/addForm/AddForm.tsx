@@ -16,7 +16,9 @@ function AddForm({ add }: { add: (a: string) => void }) {
             <input type="text" id="my-input" ref={inputRef} />
           </div>
           <div>
-            <MyButton type="submit">Add</MyButton>
+            <MyButton type="submit" theme="ok">
+              Add
+            </MyButton>
           </div>
         </form>
       </div>
