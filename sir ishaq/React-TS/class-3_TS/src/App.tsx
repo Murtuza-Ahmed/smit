@@ -16,6 +16,11 @@ function App() {
     setIsAuth(val);
   };
 
+  const onLogoutHandler = (val: boolean) => {
+    setIsAuth(val);
+    // console.log(val);
+  };
+
   const addItemHandler = (itemText: string) => {
     setItems([...items, itemText]);
   };
@@ -23,7 +28,11 @@ function App() {
     <>
       <div>
         {isAuth ? (
-          <Todo addItemHandler={addItemHandler} items={items} />
+          <Todo
+            addItemHandler={addItemHandler}
+            onLogoutHandler={onLogoutHandler}
+            items={items}
+          />
         ) : (
           <Login onLogin={setLoginHandler} />
         )}
