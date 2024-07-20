@@ -20,3 +20,8 @@
         me update karde ga.
     }
 ]
+
+<!--------------- CLASS-2-REACT-TYPESCRIPT END ------------>
+
+<!--------------- CLASS-3-REACT-TYPESCRIPT START ------------>
+                (Context API, UseContext & UseEffect)
