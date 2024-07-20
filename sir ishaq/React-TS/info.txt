@@ -4,3 +4,19 @@
 
 <!--------------- CLASS-2-REACT-TYPESCRIPT START ------------>
                 (UseRef, UseState, Dynamic Components, Styling)
+[
+    1:{
+        chiled apna data event ki madad se deta he. event ek function hota he jo pass karte hn. parent ko
+        example => (AddForm.tsx) > CHILD OR (App.tsx) > PERENT
+    }
+    2:{
+        TYPESCRIPT me function return na ho to usko (void) batate hn
+    }
+    3:{
+        react me runtime me data change karwana he to State use karna hoga. State basic react ne concept 
+        dya tha. react me jitna data store karte hn ham usse react me dikha to sakte hn lekin runtime par 
+        data update karne kylye react ko lagane parte hn (vochers).
+        basic (vochers) variable ko check karta rheta he update hwa ya nahi jesi update hoga DOM
+        me update karde ga.
+    }
+]

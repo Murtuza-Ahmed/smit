@@ -1,10 +1,22 @@
+import { useState } from "react";
+import AddForm from "./components/addForm/AddForm";
 import List from "./components/list/List";
+import "./App.css";
 
 function App() {
-  const texts = ["Hello", "Welcome", "Good Bye"];
+  const [items, setItems] = useState<string[]>([
+    "Hello",
+    "Welcome",
+    "Good Bye",
+  ]);
+
+  const addItemHandler = (itemText: string) => {
+    setItems([...items, itemText]);
+  };
   return (
     <>
-      <List data={texts} />
+      <AddForm add={addItemHandler} />
+      <List data={items} />
     </>
   );
 }
