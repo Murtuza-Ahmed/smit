@@ -1,7 +1,7 @@
 import { useState } from "react";
-import AddForm from "./components/addForm/AddForm";
-import List from "./components/list/List";
 import "./App.css";
+import Todo from "./components/todo/Todo";
+import Login from "./components/login/Login";
 
 function App() {
   const [items, setItems] = useState<string[]>([
@@ -10,13 +10,24 @@ function App() {
     "Good Bye",
   ]);
 
+  const [isAuth, setIsAuth] = useState<boolean>(false);
+
+  const setLoginHandler = (val: boolean) => {
+    setIsAuth(val);
+  };
+
   const addItemHandler = (itemText: string) => {
     setItems([...items, itemText]);
   };
   return (
     <>
-      <AddForm add={addItemHandler} />
-      <List data={items} />
+      <div>
+        {isAuth ? (
+          <Todo addItemHandler={addItemHandler} items={items} />
+        ) : (
+          <Login onLogin={setLoginHandler} />
+        )}
+      </div>
     </>
   );
 }

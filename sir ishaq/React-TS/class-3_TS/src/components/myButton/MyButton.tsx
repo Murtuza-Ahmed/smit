@@ -3,16 +3,16 @@ import "./myButton.css";
 type ButtonProps = {
   children: string;
   type: "submit" | "button";
-  theme: "ok" | "cancel";
-  click?: () => void;
+  theme?: "ok" | "cancel";
+  onClick?: () => void;
 };
 
-function MyButton({ children, type, click, theme }: ButtonProps) {
+function MyButton({ children, type, onClick, theme }: ButtonProps) {
   return (
     <>
       <button
         type={type}
-        onClick={click}
+        onClick={onClick}
         style={
           theme === "ok"
             ? { backgroundColor: "blue", color: "white" }
