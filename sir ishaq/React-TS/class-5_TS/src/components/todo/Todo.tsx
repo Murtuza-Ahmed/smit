@@ -1,12 +1,17 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { Button, Checkbox, Divider, Input, InputRef, List } from "antd";
 import Title from "antd/es/typography/Title";
+import { useDispatch, useSelector } from "react-redux";
+import { addTodo } from "../../store/todo";
+import { RootState } from "../../store";
 
 export default function Todo() {
+  const dispatch = useDispatch();
+  const data = useSelector((state: RootState) => state);
   const inputRef = useRef<InputRef>(null);
-  const [data, setData] = useState<string[]>([]);
   const addTodoHandler = () => {
-    setData([...data, inputRef.current!.input!.value]);
+    // setData([...data, inputRef.current!.input!.value]);
+    dispatch(addTodo(inputRef.current!.input!.value));
   };
   const todoOnChangeHandler = () => {};
   return (
@@ -27,7 +32,9 @@ export default function Todo() {
         dataSource={data}
         renderItem={(item) => (
           <List.Item>
-            <Checkbox onChange={() => todoOnChangeHandler}>{item}</Checkbox>
+            <Checkbox onChange={() => todoOnChangeHandler}>
+              {item.text}
+            </Checkbox>
           </List.Item>
         )}
       />
