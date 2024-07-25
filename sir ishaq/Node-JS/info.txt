@@ -1,0 +1,11 @@
+<!---------- NodeJS Class-01 Start ---------->
+TITLE => (Intro, Installation, Simple Server, Files & Paths)
+[
+    1:{
+        NodeJS esi envorment he jo browser ke beger bhi JavaScript chal jaye.
+    }
+    2:{
+        browser ke begair (JS) ko chalane kelye. Terminal par node or file ka name likhen ge.
+        node app.js
+    }
+]
