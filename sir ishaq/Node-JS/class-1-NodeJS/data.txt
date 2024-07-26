@@ -1,1 +1,5 @@
-data=raza&data2=sheikh
+data=sheroz&data2=ahmed
+data=sheroz&data2=ahmed
+data=ahmed&data2=ahmed
+data=ahmed&data2=ahmed
+data=text&data2=data

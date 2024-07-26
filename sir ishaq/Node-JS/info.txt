@@ -42,4 +42,12 @@ TITLE => (Intro, Installation, Simple Server, Files & Paths)
         file path batane kylye meri directry me file he. path.join karke batate hn (process node js me global hota he)
         (process.cwd) current working directry, jis directry me hn us directry tak path bana ke deta he.
     }
+    10:{
+        file me jab new value dete hn. to purana data se hata kar new data raplace kardeta he.
+        is problem se bachne kylye hame (readFile) banana parta he. readFile ko ham 3 chizen dete hn.
+        readFile(filePath, "utf8", callback) ko sab se phle path batate hn. second dete hn charactar in coading.
+        third callback function dete hn.
+        (point) 2 callback call hote hn to phela callback me null arha hota he dusre callback me
+        value ata he. null nahi chaye iske lye underScore "_" lagate hn
+    }
 ]

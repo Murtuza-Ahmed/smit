@@ -18,9 +18,12 @@ const server = http.createServer((req, res) => {
         let data = "";
         req.on("data", chunk => data += chunk);
         req.on("end", () => {
-            fs.writeFile(filePath, data, () => {
-                res.write("Data Recieved");
-                res.end();
+            fs.readFile(filePath, "utf8", (_, fileData) => {
+                const newData = fileData + "\n" + data;
+                fs.writeFile(filePath, newData, () => {
+                    res.write("Data Recieved");
+                    res.end();
+                });
             });
             // console.log(data);
         });
