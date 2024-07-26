@@ -51,3 +51,14 @@ TITLE => (Intro, Installation, Simple Server, Files & Paths)
         value ata he. null nahi chaye iske lye underScore "_" lagate hn
     }
 ]
+
+<!---------- NodeJS Class-01 END ---------->
+
+<!---------- NodeJS Class-02 Start ---------->
+TITLE => (Express, Middleware, Router, Static Files & Folders)
+
+[
+    1:{
+        node frameWork Express
+    }
+]
