@@ -36,5 +36,10 @@ TITLE => (Intro, Installation, Simple Server, Files & Paths)
     }
     9:{
         file save karwane kylye hame (fs) ko require karna hota he (fs) ka full form he file-system.
+        (fs) ki help se file me ham kuch likh sakte hn.
+        (fs) me kam karte hn to hame file ki (path) bhi batani parti he OR path ko require ki
+        help se mangwate hn. fs.wirteFile(file, data, optional, callback);
+        file path batane kylye meri directry me file he. path.join karke batate hn (process node js me global hota he)
+        (process.cwd) current working directry, jis directry me hn us directry tak path bana ke deta he.
     }
 ]

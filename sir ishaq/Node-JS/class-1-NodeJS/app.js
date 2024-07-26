@@ -2,6 +2,9 @@
 
 const http = require("http");
 const fs = require("fs");
+const path = require("path");
+
+const filePath = path.join(process.cwd(), "data.txt");
 
 const server = http.createServer((req, res) => {
     if (req.url === "/") {
@@ -15,9 +18,11 @@ const server = http.createServer((req, res) => {
         let data = "";
         req.on("data", chunk => data += chunk);
         req.on("end", () => {
-            console.log(data);
-            res.write("Data Recieved");
-            res.end();
+            fs.writeFile(filePath, data, () => {
+                res.write("Data Recieved");
+                res.end();
+            });
+            // console.log(data);
         });
     } else {
         res.write("404 page is not found");
