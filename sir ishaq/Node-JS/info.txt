@@ -8,4 +8,33 @@ TITLE => (Intro, Installation, Simple Server, Files & Paths)
         browser ke begair (JS) ko chalane kelye. Terminal par node or file ka name likhen ge.
         node app.js
     }
+    3:{
+        NodeJS me kuch Module ese hote hn. jo node ke ander Biltan hn. OR kuch Module ese hn node ko
+        install ke bad downlaod karne parte hn apne pass.
+    }
+    4:{
+        node me import ki jagah (require()) use karte hn.
+    }
+    5:{
+        listen ek method ka istemal karte hn. ye basic terminal ko us waqt tak chalata he jab tak ham
+        khud terminal ko band na karde. OR listen ko port batate hn is port par hamara server chale ga.
+        listen(3000) (3000 port he)
+    }
+    6:{
+        node me jab bhi koi request ati he to sath me usko kill bhi karna parta he. agar request kill
+        nahi karte to wo hamare server ke sath connected rahe ga. or connect rahe ga to nodeja jo he hamara
+        wo (non-blocking-io) ke uper chal raha hota he. basic (non-blocking-io) ye karta he jab tak pheli request
+        puri nahi ho jati wo dusri request ko accept nahi kare ga.
+    }
+    7:{
+        By default Browser Me jo bhi bhej rahe hote hn wo usse string samjta he. wo usse string na samjhe 
+        Browser ko ham batate hn (setHeader).
+    }
+    8:{
+        (data) ka kam hota he jese (data) recive ho (data) lake deta rahe.
+        (end) ka kam hota he and karna batana (data) recive hogya he.
+    }
+    9:{
+        file save karwane kylye hame (fs) ko require karna hota he (fs) ka full form he file-system.
+    }
 ]
