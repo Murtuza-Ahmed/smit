@@ -64,6 +64,8 @@ TITLE => (Express, Middleware, Router, Static Files & Folders)
     2:{
         Express kam kese karta he.
         Express ka behaviar he wo kam karta he Middleware behaviar ke uper.
-        
+        Middleware Banate kese hn. app.use(callback function Middleware) function pass karte hn.
+        express function me 3 argument deta he. 1) request 2)response 3) next. (next call hone ka matlab
+        he next apne bad wale ko call kardo)
     }
 ]
