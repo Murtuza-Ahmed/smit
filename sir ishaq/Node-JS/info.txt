@@ -106,6 +106,47 @@ TITLE => (Express, Middleware, Router, Static Files & Folders)
 TITLE => (Model, View & Controller | MVC Pattern in Express)
 [
     1:{
-
+        hamare pas multipel tecnologys jis par ham kam karte hn. usme ek Pattern follow karte hn.
+        us Pattern ko basiclly khete hn (MVC) Pattern. ye (arcitechture) Pattern he. 
+        TWO TYPE OF PATTREN
+        1) MVC (Model View Controller) 
+        2) MVVM
+        express (MVC) Pattern par kam karta he.
+        =>) Model View Controller basiclly is Pattern ke ander ap koi bhi application bana rahe hn.
+        usme ek rule follow karte hn. ek rule follow karte hn is tarah ka ke pa ka jitna bhi (data)
+        hoga wo sara (data) Model me store karen ge.
+        =>) users se related user ko jo bhi dikhana he jitna data user dekh sakta he. ya jo bhi data 
+        user screen par dekh raha he. usko (View) khete hn.
+        =>) Controller basic function hota he ya koi logic hota he jo Control kar rahi hoti he kon sa
+        data Model se utha ke view me dena he. ya view me jo changes a rahi he usko Model me update karna he ya nahi. 
+    }
+    2:{
+        Model view Controller ke ander jab kam karte hn. express ke uper to hamare pas usi name ke 3 function
+        hote hn. 3 folder hote.
+    }
+    3:{
+        Express ke ander dynamic views bana sakte hn. express ke ander hamare pass multipel file banengi.
+        unhi file ke ander data express se le rahe hn. express khud hi un Files ke ander data ko inject karate ga.
+        or inject karwane ke bad user ko dikhaye ga.
+        => dynamic views par kam karne kylye packages hote hn jinke zarye kam kar sakte hn.
+        1) HBS
+        2) JET
+        3) EJS (famous) npm i ejs
+        => YE 3 views ENGINE hn. in me se ek bhi use karke server side rendring karwa sakte hn express ke zarye.
+    }
+    4:{
+        express ke server ko batana pare ga ke ham ejs use kar rahe hn.
+        html ko convert kardenge ejs se.
+        EJS ke ander jo data dikhate hn uske 2 tareqe hn. 
+        1) single line senteces (ejs ka single line data show karwane kylye <%= %>)
+        2) multi line senteces (ejs ka multi line data show karwane kylye <% %>)
+    }
+    5:{
+        dynamic karne kylye quires parameter use karte hn.
+    }
+    6:{
+        Controller banate waqt kis chiz ka khayal rakhna zarori he.
+        1) koi bhi Controller bana rahe hn usko multipel file me divide karna lazmi he.
+        => pori ki pori server ya pori ki pori application se related logic he sab ek file me rakh di esa nahi hoga.  
     }
 ]
