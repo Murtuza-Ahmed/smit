@@ -52,7 +52,7 @@ TITLE => (Intro, Installation, Simple Server, Files & Paths)
     }
 ]
 
-<!---------- NodeJS Class-01 END ---------->
+<!---------- END ---------->
 
 <!---------- NodeJS Class-02 Start ---------->
 TITLE => (Express, Middleware, Router, Static Files & Folders)
@@ -62,10 +62,40 @@ TITLE => (Express, Middleware, Router, Static Files & Folders)
         node frameWork Express
     }
     2:{
+        apne node me package ko install karne kylye step follow karne parenge.
+        1) npm init (intall package.json),
+        2) npm install express (install express),
+        3) npm install (install node_module),
+        4) npm install nodemon (install nodemon),    -D OR --save-dav
+        5) -D OR --save-dav ye mere devdependencies me save kare ga. 
+    }
+    3:{
+        node ko run karne kylye bar bar (node app.js) karna parta he isse bachne kylye ham ek npm install
+        karte hn nodemon (npm install nodemon) install ke bad ham package.json me script ki file me atteched
+        kar dete hn. (start: nodemon app.js) isse server run hota he or bar bar refresh karne ki zarorat nahi parti he.
+    }
+    4:{
         Express kam kese karta he.
         Express ka behaviar he wo kam karta he Middleware behaviar ke uper.
-        Middleware Banate kese hn. app.use(callback function Middleware) function pass karte hn.
-        express function me 3 argument deta he. 1) request 2)response 3) next. (next call hone ka matlab
+        Middleware Banate kese hn. {app.use(callback function Middleware)} function pass karte hn.
+        express function me 3 argument deta he. [1) request 2)response 3) next]. (next call hone ka matlab
         he next apne bad wale ko call kardo)
+    }
+    5:{
+        phele chunk ki madad se data nikal rahe the. ab thired party Middleware ka istemal karke 
+        data nikalen ge. third party Middleware name (body-parser).
+        1) body-parser multipel type ki parsing provide karta he,
+        2) body-parser.urlencoded ye return karta he ek or function, (point) isko ek object pass karte
+        hn jo iske option hote hn. {extanded: false},
+        3) agar JSON par kam kar rahe hn to body.json() ko call kar denge,
+    }
+    6:{
+        path.join ki madad se ham current file batate hn cwd ki madad se. current Folders 
+        tak path batane kylye process.cwd ke zarye, 
+        isko use karne ke 2 treeqen hn.
+        1) path.join(process.cwd(), folder, file), process.cwd me ham kisi bhi file me khare hote hn.
+        ye hamesha root ki path bataye gi.
+        2) underScore underScore directry name se bhi variable hota he. global variable hota he.  underScore underScore directry name
+        ye us file ka path bataye gi.
     }
 ]
