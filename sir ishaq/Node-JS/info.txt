@@ -150,3 +150,13 @@ TITLE => (Model, View & Controller | MVC Pattern in Express)
         => pori ki pori server ya pori ki pori application se related logic he sab ek file me rakh di esa nahi hoga.  
     }
 ]
+
+<!---------- END ---------->
+
+<!---------- NodeJS Class-04 Start ---------->
+TITLE => (Complete Authentication with B-Crypt & JWT)
+[
+    1:{
+        
+    }
+]
