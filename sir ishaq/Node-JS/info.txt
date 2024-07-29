@@ -99,3 +99,13 @@ TITLE => (Express, Middleware, Router, Static Files & Folders)
         ye us file ka path bataye gi.
     }
 ]
+
+<!---------- END ---------->
+
+<!---------- NodeJS Class-03 Start ---------->
+TITLE => (Model, View & Controller | MVC Pattern in Express)
+[
+    1:{
+
+    }
+]
