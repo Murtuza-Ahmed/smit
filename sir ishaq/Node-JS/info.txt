@@ -157,6 +157,11 @@ TITLE => (Model, View & Controller | MVC Pattern in Express)
 TITLE => (Complete Authentication with B-Crypt & JWT)
 [
     1:{
-        
+        Authentication basic application me protection use ho rahi hoti he kisi route ko protect karne
+        kylye ya kisi screen ko protect karne kylye. kisi specific data ko karne kylye. 
+    }
+    2:{
+        rest api ke ander basic jo bhi data arha hota he. wo kisi form ki submit se nahi ata he. json form
+        ke ander data bhejte hn. or json form ke ander hi response karte hn.
     }
 ]
