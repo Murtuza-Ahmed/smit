@@ -164,4 +164,9 @@ TITLE => (Complete Authentication with B-Crypt & JWT)
         rest api ke ander basic jo bhi data arha hota he. wo kisi form ki submit se nahi ata he. json form
         ke ander data bhejte hn. or json form ke ander hi response karte hn.
     }
+    3:{
+        1) database se related jitni bhi logic he wo sab Model me ayen gi.
+        2) api se related jitni bhi logic he wo sab Controller me ayen gi. 
+        3) route address bana rahe hn hamara server us par land kar sake.
+    }
 ]
