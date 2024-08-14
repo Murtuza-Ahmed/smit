@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require("fs");
+const bcrypt = require("bcrypt");
 
 const jsonFilePAth = path.join(process.cwd(), "data", "users.json");
 const readData = () => {
@@ -30,8 +31,9 @@ exports.createUser = async (email, password, userId) => {
         if (matched) {
             throw new Error("User Already Exits");
         } else {
+            const encPassword = await bcrypt.hash(password, 12);
             // const userId = Date.now();
-            await writeData([...users, { email, password, userId }]);
+            await writeData([...users, { email, password: encPassword, userId }]);
         };
     } catch (err) {
         throw err;
