@@ -1,3 +1,4 @@
+const bcrypt = require("bcrypt");
 const { createUser, findUser } = require("../models/user");
 
 exports.createUser = async (email, password) => {
@@ -12,10 +13,14 @@ exports.createUser = async (email, password) => {
 exports.login = async (email, password) => {
     try {
         const user = await findUser(email);
-        if (!!user && user.password === password) {     // not not user true OR false ki value he !!
+        if (!user) {
+            return "Wrong email ID or password";
+        }
+        const result = await bcrypt.compare(password, user.password);
+        if (result) {
             return "Login Successfully";
         }
-        return "Worng email Id or password";
+        return "Wrong email ID or password";
     } catch (err) {
         throw err;
     }
