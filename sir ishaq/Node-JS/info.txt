@@ -173,3 +173,13 @@ TITLE => (Complete Authentication with B-Crypt & JWT)
         (JWT) json web token
     }
 ]
+
+<!---------- END ---------->
+
+<!---------- NodeJS Class-05 Start ---------->
+TITLE => (Connecting ReactJS App with Node & Express)
+[
+    1:{
+        
+    }
+]
