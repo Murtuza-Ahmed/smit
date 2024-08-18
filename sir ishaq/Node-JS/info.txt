@@ -180,6 +180,8 @@ TITLE => (Complete Authentication with B-Crypt & JWT)
 TITLE => (Connecting ReactJS App with Node & Express)
 [
     1:{
-        
+        CORS ERROR: => Cross-Origin Resource Sharing.
+        basic is feuture me kia hota he apka browser jo he. wo kisi bhi request ko rok deta he. jo kisi bhi
+        ap hi ke apne url par nahi ja rahi ho.
     }
 ]

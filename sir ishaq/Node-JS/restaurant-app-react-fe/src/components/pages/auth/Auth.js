@@ -21,7 +21,7 @@ export const useSetToken = () => {
 };
 
 export const useRemoveToken = () => {
-  const [, , removeCookie] = useCookies();
+  const [_, removeCookie] = useCookies();
 
   return () => removeCookie("token");
 };
