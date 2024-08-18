@@ -1,0 +1,24 @@
+<!---------- Mongo DB Class-01 Start ---------->
+TITLE => (Installation, Shell & CRUD Operation)
+
+[
+    1:{
+        Mongo db bsic data base he.
+        Data base 2 triqe ke hote hn 1) SQL 2) NoSQL.
+        Mongo db NoSQL data base he.
+        1) (SQL) sql ek table stucture ke uper chal raha hota he.
+        2) (NoSQL) NoSQL  me is tarah ki koi chezz nahi hoti he.
+        point) NoSQL data basic sql data base se fast hote hn.
+    }
+    2:{
+        Mongo db basiclly jo bhi stack he javascript ka jo bhi stack he usi ke ander fall karti he.
+        kiu ke almost javascript ki tarah hi apne kam perform kar rahi hoti he.
+        Mongo db document base par data base he. document base ka matlab iske pas jitna bhi data arha he
+        document ke ander store kar raha hota he table ke ander store nahi kar raha hota.
+        1) document base stucture hota he.
+        2) table base stucture hota he.
+
+        document base me normal file me save kar raha hota he.
+        data save jo karta he json ki format me save kar raha hota he.
+    }
+]
