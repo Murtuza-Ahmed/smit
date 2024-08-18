@@ -169,4 +169,7 @@ TITLE => (Complete Authentication with B-Crypt & JWT)
         2) api se related jitni bhi logic he wo sab Controller me ayen gi. 
         3) route address bana rahe hn hamara server us par land kar sake.
     }
+    4:{
+        (JWT) json web token
+    }
 ]

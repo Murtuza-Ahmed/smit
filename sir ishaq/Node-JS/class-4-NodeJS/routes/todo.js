@@ -4,8 +4,7 @@ const { addTodo, getAllTodos } = require("../controllers/todo");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    // res.send(getAllTodos());
-    res.render("todo", { todos: getAllTodos() })
+    res.send({ user: req.user, todos: getAllTodos() })
 });
 
 router.post("/add", (req, res) => {
