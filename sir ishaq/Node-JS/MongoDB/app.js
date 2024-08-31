@@ -9,6 +9,7 @@ const auth = require("./routes/auth");
 const products = require("./routes/products");
 const { vrify } = require("./middlewere/auth");
 // const router = require("./routes/auth");
+const mongoose = require("./models/collection");
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
