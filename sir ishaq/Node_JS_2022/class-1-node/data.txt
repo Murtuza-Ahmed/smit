@@ -1,0 +1,2 @@
+data=sheroz&data1=raza
+data=raza&data1=raza
