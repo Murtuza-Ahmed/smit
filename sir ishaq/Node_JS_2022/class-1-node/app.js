@@ -1,6 +1,7 @@
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
+const querystring = require("querystring");
 
 const filePath = path.join(__dirname, "data.txt");
 
@@ -20,9 +21,17 @@ const server = http.createServer((req, res) => {
             data += chunk;
         });
         req.on("end", () => {
-            fs.readFile(filePath, "utf8", (_, oldData) => {
-                const newData = oldData + "\n" + data;
-                fs.writeFile(filePath, newData, () => console.log("Saved!"));
+            fs.readFile(filePath, "utf8", (err, oldData) => {
+                if (err) {
+                    console.error("error reading file:", err);
+                    return;
+                }
+                const queryOldData = querystring.parse(oldData);
+                const queryData = querystring.parse(data);
+                const mergeData = { ...queryOldData, ...queryData };
+                const final = querystring.stringify(mergeData);
+                // const newData = oldData + "\n" + data;
+                fs.writeFile(filePath, final, () => console.log("Saved!"));
             });
             // fs.writeFile(filePath, data, () => {
             //     console.log("Saved!");
