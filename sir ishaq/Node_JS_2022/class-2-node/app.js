@@ -1,22 +1,14 @@
 const express = require("express");
 const app = express();
+const fromRoute = require("./routes/form.js");
 
 app.use((req, res, next) => {   // MIDDLE-WERE
     console.log(req.url);
     next();
 });
 
-app.post("/form", (req, res, next) => {
-    res.send(req.url + "check");
+app.use("/form", fromRoute);
+app.use("/", (req, res) => {
+    res.send("Welcome to Express App");
 });
-
-app.use("/", (req, res, next) => {   // MIDDLE-WERE
-    res.send(`
-        <form action="/form" method="POST"> 
-            <input name="data"/> 
-            <button>Submit</button> 
-        </form>
-    `);
-});
-
 app.listen(3000);
