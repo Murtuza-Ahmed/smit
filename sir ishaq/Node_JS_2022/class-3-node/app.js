@@ -9,6 +9,9 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static(path.join(__dirname, "public")));
 
+app.set("view engine", "ejs");
+app.set("views", "views");
+
 app.use((req, res, next) => {   // MIDDLE-WERE
     console.log(req.url);
     next();
@@ -16,6 +19,6 @@ app.use((req, res, next) => {   // MIDDLE-WERE
 
 app.use("/form", fromRoute);
 app.use("/", (req, res) => {
-    res.send("Welcome to Express App");
+    res.render("home", { user: "Sheroz" });
 });
 app.listen(3000);
