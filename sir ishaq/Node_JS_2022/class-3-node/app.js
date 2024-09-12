@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const fromRoute = require("./routes/form.js");
+const productsRoute = require("./routes/products.js");
 const path = require("path");
 
 app.use(bodyParser.urlencoded({
@@ -17,7 +17,7 @@ app.use((req, res, next) => {   // MIDDLE-WERE
     next();
 });
 
-app.use("/form", fromRoute);
+app.use("/product", productsRoute);
 app.use("/", (req, res) => {
     res.render("home", { user: "Sheroz" });
 });
