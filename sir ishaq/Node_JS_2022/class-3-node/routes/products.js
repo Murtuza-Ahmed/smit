@@ -3,6 +3,7 @@ const router = express.Router();
 const path = require("path");
 const productController = require("../controllers/products");
 
+router.get("/", productController.fetchAll);
 router.get("/form", productController.getAddProduct);
 router.post("/form", productController.postAddProduct);
 

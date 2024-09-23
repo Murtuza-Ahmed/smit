@@ -10,5 +10,5 @@ exports.postAddProduct = (req, res) => {
 };
 
 exports.fetchAll = (req, res) => {
-    res.send(products);
+    res.render("products", {products});
 };
