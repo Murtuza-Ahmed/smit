@@ -7,16 +7,15 @@ const readFile = () => {
     return new Promise((resolve, reject) => {
         fs.readFile(userJsonFile, (err, data) => {
             if (err) {
-                reject(err);
+                return reject(err);
+            }
+            const dataString = data.toString();
+            if (dataString) {
+                resolve(JSON.parse(dataString));
             } else {
-                const dataString = data.toString();
-                if (dataString) {
-                    resolve(JSON.parse(dataString));
-                } else {
-                    resolve([]);
-                };
-            };
-        });
+                resolve([]);
+            }
+        })
     });
 };
 

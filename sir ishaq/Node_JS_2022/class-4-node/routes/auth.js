@@ -4,11 +4,11 @@ const path = require("path");
 
 const router = express.Router();
 
-router.get("/signin", usersController.getSignIn);
+router.get("/sign-in", usersController.getSignIn);
 
 router.get("/signup", usersController.getSignUp);
 
-router.post("/signin", usersController.postSignIn);
+router.post("/sign-in", usersController.postSignIn);
 
 router.post("/signup", usersController.postSignUp);
 
