@@ -38,8 +38,15 @@ exports.storeAUser = async (user) => {
         } else {
             data = [user];
         };
-        await writeFile();
+        await writeFile(data);
+        return true;
     } catch (err) {
         console.error(err);
     };
+};
+
+exports.fetchAll = async () => {
+    try {
+        return await readFile();
+    } catch (err) { console.error(err) };
 };
