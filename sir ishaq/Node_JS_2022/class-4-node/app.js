@@ -1,8 +1,9 @@
 const express = require("express");
-const app = express();
 const bodyParser = require("body-parser");
-const productsRoute = require("./routes/products.js");
 const path = require("path");
+const app = express();
+const productsRoute = require("./routes/products.js");
+const authRoutes = require("./routes/auth.js");
 
 app.use(bodyParser.urlencoded({
     extended: false
@@ -17,6 +18,7 @@ app.use((req, res, next) => {   // MIDDLE-WERE
     next();
 });
 
+app.use("/auth", authRoutes);
 app.use("/product", productsRoute);
 app.use("/", (req, res) => {
     res.render("home", { user: "Sheroz" });
