@@ -1,10 +1,15 @@
 const express = require("express");
-const router = express.Router();
+const productsController = require("../controllers/products");
 const path = require("path");
-const productController = require("../controllers/products");
+const { authMiddleware } = require("../middlewares/auth");
 
-router.get("/", productController.fetchAll);
-router.get("/form", productController.getAddProduct);
-router.post("/form", productController.postAddProduct);
+const router = express.Router();
+
+
+router.get("/", authMiddleware, productsController.fetchAll);
+
+router.get("/form", authMiddleware, productsController.getAddProduct);
+
+router.post("/form", authMiddleware, productsController.postAddProduct);
 
 module.exports = router;

@@ -7,9 +7,10 @@ class Product {
     save() {
         products.push({ title: this.title });
     }
+
     static fetchAll() {
         return products;
     }
-};
+}
 
 module.exports = Product;
