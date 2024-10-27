@@ -17,7 +17,7 @@ const readFile = () => {
 }
 
 const writeFile = (dataToWrite) => {
-    fs.writeFile(userJsonFile, dataToWrite, (err, data) => {
+    fs.writeFile(userJsonFile, JSON.stringify(dataToWrite), (err, data) => {
         return new Promise((resolve, reject) => {
             if (err) {
                 return reject(err)
@@ -27,13 +27,22 @@ const writeFile = (dataToWrite) => {
     })
 }
 
-const storeAUsers = async (user) => {
+exports.storeAUsers = async (user) => {
     try {
         let data = await readFile()
-        data ? data.push(user) : data = [user]
+        if (data) {
+            return data.push(user)
+        }
+        data = [user]
         await writeFile(data)
         return true
     } catch (err) {
         console.error(err)
     }
+}
+
+exports.fetchAll = async () => {
+    try {
+        return await readFile()
+    } catch (err) { console.error(err) }
 }
