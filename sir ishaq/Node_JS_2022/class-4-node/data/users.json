@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "email": "a@a.c",
+    "password": "12345"
+  },
+  {
+    "email": "cegut@mailinator.com",
+    "password": "Pa$$w0rd!"
+  }
+]
