@@ -14,7 +14,11 @@ exports.postSignIn = async (req, res) => {  // Added req, res
         const userCred = req.body;
         const user = await userModel.getAUsers(userCred.email)
         const result = await bcrypt.compare(userCred.password, user.password)
-        res.send(result)
+        if (result) {
+            res.setHeader()
+        } else {
+            res.send("invalid email and password")
+        }
     } catch (err) {
         res.send(err)
     }
