@@ -1,3 +1,4 @@
+const bcrypt = require("bcrypt")
 const userModel = require("../models/users");
 
 exports.getSignIn = (req, res) => {
@@ -8,25 +9,32 @@ exports.getSignUp = (req, res) => {
     res.render("auth/signup");
 };
 
-exports.postSignIn = (req, res) => {  // Added req, res
+exports.postSignIn = async (req, res) => {  // Added req, res
+    try {
+        const userCred = req.body;
+        const user = await userModel.getAUsers(userCred.email)
+        const result = await bcrypt.compare(userCred.password, user.password)
+        res.send(result)
+    } catch (err) {
+        res.send(err)
+    }
     // Implement sign-in logic here
     res.send("Sign-in functionality not yet implemented");
 };
 
 exports.postSignUp = async (req, res) => {
-    try {
-        const user = req.body;
-        const users = await userModel.fetchAll();
-        const matched = users.find((u) => u.email === user.email);
 
-        if (matched) {
+    const user = req.body;
+    const matched = await userModel.getAUsers(user.email)
+        .then((matched) => {
             return res.status(400).send("User already exists");
-        }
-
-        await userModel.storeAUsers(user);
-        res.redirect("/signin"); // Added "/" to make it an absolute path
-
-    } catch (err) {
-        res.status(500).send("An error occurred: " + err.message);
-    }
+        })
+        .catch(async (err) => {
+            try {
+                await userModel.storeAUsers(user);
+                res.redirect("/signin"); // Added "/" to make it an absolute path
+            } catch (err) {
+                console.error(err)
+            }
+        })
 };

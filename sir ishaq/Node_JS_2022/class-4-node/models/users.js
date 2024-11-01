@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs').promises; // Using fs.promises for async support
+const bcrypt = require("bcrypt")
 
 const userJsonFile = path.join(__dirname, '..', 'data', 'users.json');
 
@@ -29,6 +30,7 @@ const writeFile = async (dataToWrite) => {
 exports.storeAUsers = async (user) => {
     try {
         let data = await readFile(); // Read current data
+        user.password = await bcrypt.hash(user.password, 12)
         data.push(user); // Add new user to data array
         await writeFile(data); // Save updated data to file
         return true;
@@ -37,6 +39,21 @@ exports.storeAUsers = async (user) => {
         return false;
     }
 };
+
+exports.getAUsers = async (email) => {
+    try {
+        const users = await readFile();
+        const matched = users.find((u) => u.email === email)
+        if (matched) {
+            return matched
+        } else {
+            throw new Error("User not found")
+        }
+    } catch (err) {
+        console.error("Error fetching users:", err);
+        return [];
+    }
+}
 
 exports.fetchAll = async () => {
     try {
