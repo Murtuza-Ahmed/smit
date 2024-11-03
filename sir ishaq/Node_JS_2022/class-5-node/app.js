@@ -5,6 +5,7 @@ const path = require("path");
 var session = require('express-session')
 const authRoutes = require("./routes/auth.js")
 const productsRoute = require("./routes/products.js");
+const apiRouter = require("./routes/api.js")
 
 
 app.use(session({
@@ -14,9 +15,12 @@ app.use(session({
 }))
 
 
-app.use(bodyParser.urlencoded({
+app.use(bodyParser.urlencoded({ // x-www-form-urlencoded
     extended: false
 }));
+
+app.use(bodyParser.json()) // application/json
+
 app.use(express.static(path.join(__dirname, "public")));
 
 app.set("view engine", "ejs");
@@ -29,6 +33,9 @@ app.use((req, res, next) => {   // MIDDLE-WERE
 
 app.use("/auth", authRoutes)
 app.use("/product", productsRoute);
+
+app.use("/api", apiRouter)
+
 app.use("/", (req, res) => {
     res.render("home", { user: "Sheroz" });
 });
