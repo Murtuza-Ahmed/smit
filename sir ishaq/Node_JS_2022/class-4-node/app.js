@@ -2,8 +2,16 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const path = require("path");
+var session = require('express-session')
 const authRoutes = require("./routes/auth.js")
 const productsRoute = require("./routes/products.js");
+
+
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: false
+}))
 
 
 app.use(bodyParser.urlencoded({

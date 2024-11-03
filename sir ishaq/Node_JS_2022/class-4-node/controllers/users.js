@@ -9,36 +9,39 @@ exports.getSignUp = (req, res) => {
     res.render("auth/signup");
 };
 
-exports.postSignIn = async (req, res) => {  // Added req, res
+exports.postSignIn = async (req, res) => {
     try {
         const userCred = req.body;
-        const user = await userModel.getAUsers(userCred.email)
-        const result = await bcrypt.compare(userCred.password, user.password)
+        const user = await userModel.getAUsers(userCred.email);
+        const result = await bcrypt.compare(userCred.password, user.password);
+
         if (result) {
-            res.setHeader()
+            // res.setHeader("Set-Cookie", "isAuthenticated=true; HttpOnly")
+            req.session.user = userCred.email;
+            res.send("Login Successfully");
         } else {
-            res.send("invalid email and password")
+            res.send("Invalid email and password");
         }
     } catch (err) {
-        res.send(err)
+        res.send(err);
     }
-    // Implement sign-in logic here
-    res.send("Sign-in functionality not yet implemented");
 };
+
 
 exports.postSignUp = async (req, res) => {
-
     const user = req.body;
-    const matched = await userModel.getAUsers(user.email)
-        .then((matched) => {
-            return res.status(400).send("User already exists");
-        })
-        .catch(async (err) => {
-            try {
-                await userModel.storeAUsers(user);
-                res.redirect("/signin"); // Added "/" to make it an absolute path
-            } catch (err) {
-                console.error(err)
-            }
-        })
+
+    const matchedUser = await userModel.getAUsers(user.email);
+    if (matchedUser) {
+        return res.status(400).send("User already exists");
+    }
+
+    try {
+        await userModel.storeAUsers(user);
+        res.redirect("/signin");
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("An error occurred during sign-up");
+    }
 };
+
