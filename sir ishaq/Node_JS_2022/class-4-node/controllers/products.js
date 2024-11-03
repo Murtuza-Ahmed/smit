@@ -16,8 +16,11 @@ exports.postAddProduct = async (req, res) => { // Make it async if saving involv
 
 exports.fetchAll = async (req, res) => {
     try {
+        // console.log(req.session.user)
         const products = await Product.fetchAll(); // Await if fetchAll is async
         res.render("products", { products });
+
+
     } catch (err) {
         res.status(500).send("Error fetching products: " + err.message);
     }
